@@ -17,7 +17,7 @@ function App() {
   const faqItems = [
     {
       question: 'Qual é a data e local do evento?',
-      answer: 'O 1º Encontro de Saxofone Erudito de São Paulo ocorre no Auditório Ignaz J. Sessler, localizado na Rua Bresser, 2315 (Bloco A) - Mooca - São Paulo - SP. A data e horário completos estão disponíveis na seção de cronograma.'
+      answer: 'A Comemoração de 10 anos do Grupo SAX CCB-ERUDITO-SACRO ocorre no Auditório Ignaz J. Sessler, localizado na Rua Bresser, 2315 (Bloco A) - Mooca - São Paulo - SP. A data e horário completos estão disponíveis na seção de cronograma.'
     },
     {
       question: 'Quantos ingressos posso comprar?',
@@ -111,7 +111,7 @@ function App() {
 
             <div className="confirmation-details">
               <p><strong>Confirmação #:</strong> SAX-2024-001234</p>
-              <p><strong>Evento:</strong> 1º Encontro de Saxofone Erudito de São Paulo</p>
+              <p><strong>Evento:</strong> Comemoração de 10 anos do Grupo: SAX CCB-ERUDITO-SACRO</p>
               <p><strong>Data:</strong> [Data do evento]</p>
               <p><strong>Horário:</strong> 09:00 às 16:30</p>
               <p><strong>Local:</strong> Auditório Ignaz J. Sessler, Rua Bresser, 2315</p>
@@ -140,7 +140,7 @@ function App() {
 
       <section className="hero">
         <div className="hero-content">
-          <h1>1º Encontro de Saxofone Erudito de São Paulo</h1>
+          <h1>Comemoração de 10 anos do Grupo: SAX CCB-ERUDITO-SACRO</h1>
           <p className="hero-subtitle">Um dia inteiro celebrando a excelência do saxofone erudito</p>
         </div>
       </section>
@@ -162,7 +162,7 @@ function App() {
           <h2>Sobre o Evento</h2>
           <div className="about-content">
             <p>
-              O 1º Encontro de Saxofone Erudito de São Paulo é um evento dedicado à celebração e difusão do saxofone
+              A Comemoração de 10 anos do Grupo SAX CCB-ERUDITO-SACRO é um evento dedicado à celebração e difusão do saxofone
               em sua forma mais clássica e refinada. Reunindo saxofonistas talentosos de todo o Brasil, criamos um espaço
               onde a excelência musical encontra a sofisticação.
             </p>
