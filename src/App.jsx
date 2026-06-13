@@ -157,7 +157,7 @@ function App() {
         </div>
       </section>
 
-      <section>
+      <section id="about">
         <div className="container">
           <h2>Sobre o Evento</h2>
           <div className="about-content">
@@ -179,7 +179,7 @@ function App() {
         </div>
       </section>
 
-      <section className="alt">
+      <section className="alt" id="presentations">
         <div className="container">
           <h2>Apresentações em Destaque</h2>
           <div className="artists-grid">
@@ -197,7 +197,7 @@ function App() {
         </div>
       </section>
 
-      <section>
+      <section id="schedule">
         <div className="container">
           <h2>Cronograma do Evento</h2>
           <div className="schedule-container">
@@ -270,7 +270,7 @@ function App() {
         </div>
       </section>
 
-      <section>
+      <section id="ticket">
         <div className="container">
           <h2>Ingresso para o Encontro</h2>
           <div className="ticket-container">
@@ -307,7 +307,7 @@ function Header() {
         <div className="logo">🎷 SAXOFONE</div>
         <nav className="nav">
           <li><a href="#about">Sobre</a></li>
-          <li><a href="#artists">Artistas</a></li>
+          <li><a href="#presentations">Apresentações</a></li>
           <li><a href="#schedule">Cronograma</a></li>
           <li><a href="#ticket">Ingresso</a></li>
         </nav>
