@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A1A1A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0A0A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C41E3A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B6F47;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+
+  <!-- Accent Elements -->
+  <circle cx="100" cy="100" r="150" fill="#D4AF37" opacity="0.1"/>
+  <circle cx="1100" cy="500" r="200" fill="#C41E3A" opacity="0.1"/>
+
+  <!-- Main Content -->
+  <g>
+    <!-- Icon -->
+    <g transform="translate(150, 200)">
+      <circle cx="0" cy="0" r="80" fill="#D4AF37" opacity="0.2"/>
+      <text x="0" y="30" font-size="80" text-anchor="middle" fill="#D4AF37" font-weight="bold">🎷</text>
+    </g>
+
+    <!-- Title -->
+    <text x="420" y="150" font-size="72" font-weight="900" fill="#FFFFFF" font-family="'Playfair Display', serif">
+      1º Encontro de
+    </text>
+    <text x="420" y="240" font-size="72" font-weight="900" fill="url(#textGradient)" font-family="'Playfair Display', serif">
+      Saxofone Erudito
+    </text>
+
+    <!-- Subtitle -->
+    <text x="420" y="340" font-size="40" fill="#D4AF37" font-family="'Montserrat', sans-serif" font-weight="600">
+      São Paulo
+    </text>
+
+    <!-- Description -->
+    <text x="420" y="420" font-size="28" fill="#CCCCCC" font-family="'Montserrat', sans-serif">
+      Um dia inteiro de música de excelência
+    </text>
+
+    <!-- Details -->
+    <g>
+      <circle cx="420" cy="520" r="4" fill="#D4AF37"/>
+      <text x="440" y="530" font-size="24" fill="#999999" font-family="'Montserrat', sans-serif">
+        Apresentações | Networking | Aprendizado
+      </text>
+    </g>
+  </g>
+
+  <!-- Decorative Line -->
+  <line x1="420" y1="560" x2="1050" y2="560" stroke="#D4AF37" stroke-width="3" opacity="0.6"/>
+</svg>
