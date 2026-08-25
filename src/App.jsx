@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import './App.css'
+import giancarloPhoto from './assets/giancarlo.jpg'
+import amarildoPhoto from './assets/amarildo.jpeg'
+import ciasaxPhoto from './assets/ciasax.jpeg'
+import josePhoto from './assets/jose.png'
 
 function App() {
   const [showThankYou, setShowThankYou] = useState(false)
@@ -17,7 +21,7 @@ function App() {
   const faqItems = [
     {
       question: 'Qual é a data e local do evento?',
-      answer: 'A Comemoração de 10 anos do Grupo SAX CCB-ERUDITO-SACRO ocorre no Auditório Ignaz J. Sessler, localizado na Rua Bresser, 2315 (Bloco A) - Mooca - São Paulo - SP. A data e horário completos estão disponíveis na seção de cronograma.'
+      answer: 'A Comemoração de 10 anos do Grupo SAX CCB-ERUDITO-SACRO ocorre na Faculdade Uni Santana, localizada na Rua Voluntários da Pátria, 257 - Próximo ao Metrô Tietê (Linha Azul). A data e horário completos estão disponíveis na seção de cronograma.'
     },
     {
       question: 'Quantos ingressos posso comprar?',
@@ -29,11 +33,11 @@ function App() {
     },
     {
       question: 'O evento é acessível para pessoas com deficiência?',
-      answer: 'Sim, o auditório possui acessibilidade completa. Se necessitar de acomodações especiais, entre em contato pelo email encontrosaxofone@gmail.com com antecedência.'
+      answer: 'Se necessitar de acomodações especiais, entre em contato pelo email encontrosaxofone@gmail.com com antecedência.'
     },
     {
       question: 'Está incluso almoço?',
-      answer: 'Sim! O ingresso inclui almoço durante o intervalo do meio do dia. Também haverá coffee break nos períodos de descanso.'
+      answer: 'O almoço não está incluso no ingresso. No local há restaurante disponível da própria Faculdade Uni Santana, além de outras opções de almoço na região.'
     },
     {
       question: 'Como faço para receber o ingresso eletrônico?',
@@ -43,32 +47,43 @@ function App() {
 
   const presentations = [
     {
-      name: 'Apresentação 1',
-      role: 'Saxofone Soprano',
-      bio: 'Exploração do repertório clássico para saxofone soprano, desde os grandes compositores eruditos até obras contemporâneas.'
+      name: 'O Saxofone que Venceu o Tempo',
+      role: 'Com Giancarlo Medeiros',
+      bio: 'Uma reflexão sobre a trajetória do saxofone erudito e sua permanência ao longo das décadas.',
+      photo: giancarloPhoto
     },
     {
-      name: 'Apresentação 2',
-      role: 'Saxofone Alto',
-      bio: 'Uma jornada através da música erudita para saxofone alto, destacando a versatilidade e beleza tímbrica do instrumento.'
+      name: 'Como ser uma Referência Sonora',
+      role: 'Com Amarildo Nascimento',
+      bio: 'Caminhos e práticas para desenvolver uma sonoridade autêntica e marcante ao saxofone.',
+      photo: amarildoPhoto
     },
     {
-      name: 'Apresentação 3',
-      role: 'Saxofone Tenor',
-      bio: 'Apresentação focada no saxofone tenor erudito, explorando suas capacidades expressivas no contexto da música clássica.'
+      name: 'Concerto Especial',
+      role: 'CiaSax',
+      bio: 'Apresentação musical especial em celebração aos 10 anos do Grupo SAX CCB-ERUDITO-SACRO.',
+      photo: ciasaxPhoto
+    },
+    {
+      name: 'A Arte de Tocar Junto',
+      role: 'Com José de Carvalho',
+      bio: 'Afinação Coletiva, Equilíbrio sonoro e escuta ativa. Realizando aplicação prática nos hinos com Giancarlo Medeiros.',
+      photo: josePhoto
     }
   ]
 
   const schedule = [
-    { time: '09:00', event: 'Abertura do Evento', description: 'Boas-vindas, apresentação do programa e abertura do auditório' },
-    { time: '09:30', event: 'Apresentação 1 - Saxofone Soprano', description: 'Repertório clássico para saxofone soprano' },
-    { time: '10:30', event: 'Intervalo', description: 'Coffee break e networking entre os participantes' },
-    { time: '11:00', event: 'Apresentação 2 - Saxofone Alto', description: 'Música erudita para saxofone alto' },
-    { time: '12:00', event: 'Almoço', description: 'Intervalo para almoço dos participantes' },
-    { time: '13:30', event: 'Apresentação 3 - Saxofone Tenor', description: 'Repertório erudito para saxofone tenor' },
-    { time: '14:30', event: 'Pausa', description: 'Breve intervalo' },
-    { time: '15:00', event: 'Apresentações Finais', description: 'Seleção especial das melhores apresentações do dia' },
-    { time: '16:30', event: 'Encerramento', description: 'Agradecimentos, prêmios e brinde final do encontro' }
+    { time: '08:00 às 09:00', event: 'Credenciamento & Café de Boas Vindas', description: '' },
+    { time: '09:00 às 09:30', event: 'Cerimônia de Abertura - Uma Década', description: '' },
+    { time: '09:30 às 10:30', event: 'O Saxofone que Venceu o Tempo', description: 'Com Giancarlo Medeiros' },
+    { time: '10:30 às 11:30', event: 'Como ser uma Referência Sonora', description: 'Com Amarildo Nascimento' },
+    { time: '11:30 às 12:30', event: 'Seu Saxofone está trabalhando a seu favor?', description: 'Com Caio Henrique' },
+    { time: '12:30 às 14:00', event: 'Pausa para Almoço e Convivência', description: '' },
+    { time: '14:00 às 14:50', event: 'Concerto Especial - CiaSax', description: '' },
+    { time: '14:50 às 15:10', event: 'Espaço Parceiros Oficiais', description: '' },
+    { time: '15:10 às 16:10', event: 'A Arte de Tocar Junto', description: 'Com Giancarlo Medeiros e José de Carvalho' },
+    { time: '16:10 às 16:30', event: 'Espaço Sax Experience com os Expositores', description: '' },
+    { time: '16:30 às 17:00', event: 'O Grande Encerramento e Reconhecimentos', description: '' }
   ]
 
   const benefits = [
@@ -113,8 +128,8 @@ function App() {
               <p><strong>Confirmação #:</strong> SAX-2024-001234</p>
               <p><strong>Evento:</strong> Comemoração de 10 anos do Grupo: SAX CCB-ERUDITO-SACRO</p>
               <p><strong>Data:</strong> [Data do evento]</p>
-              <p><strong>Horário:</strong> 09:00 às 16:30</p>
-              <p><strong>Local:</strong> Auditório Ignaz J. Sessler, Rua Bresser, 2315</p>
+              <p><strong>Horário:</strong> 08:00 às 17:00</p>
+              <p><strong>Local:</strong> Faculdade Uni Santana, Rua Voluntários da Pátria, 257</p>
               <p><strong>Ingresso(s):</strong> 1 acesso completo</p>
             </div>
 
@@ -142,18 +157,6 @@ function App() {
         <div className="hero-content">
           <h1>Comemoração de 10 anos do Grupo: SAX CCB-ERUDITO-SACRO</h1>
           <p className="hero-subtitle">Um dia inteiro celebrando a excelência do saxofone erudito</p>
-        </div>
-      </section>
-
-      <section className="hero-video-section">
-        <div className="container">
-          <div className="hero-video">
-            <iframe
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              allowFullScreen
-              title="Saxofone - Vídeo Explicativo"
-            ></iframe>
-          </div>
         </div>
       </section>
 
@@ -186,7 +189,7 @@ function App() {
             {presentations.map((presentation, idx) => (
               <div key={idx} className="artist-card">
                 <div className="artist-photo">
-                  <div className="artist-photo-placeholder">{idx + 1}</div>
+                  <img src={presentation.photo} alt={presentation.name} />
                 </div>
                 <h3>{presentation.name}</h3>
                 <p className="artist-role">{presentation.role}</p>
@@ -246,21 +249,19 @@ function App() {
           <h2>Como Chegar</h2>
           <div className="location-content">
             <div className="location-info">
-              <h3>Auditório Ignaz J. Sessler</h3>
+              <h3>Faculdade Uni Santana</h3>
               <div className="location-details">
-                <p><strong>Endereço:</strong> Rua Bresser, 2315 - Bloco A<br />Mooca - São Paulo, SP 03162-030</p>
-                <p><strong>Telefone:</strong> (11) 2000-0000</p>
-                <p><strong>Estacionamento:</strong> Disponível no local</p>
-                <p><strong>Acessibilidade:</strong> Completa para PCD</p>
+                <p><strong>Endereço:</strong> Rua Voluntários da Pátria, 257<br />Próximo ao Metrô Tietê (Linha Azul)</p>
+                <p><strong>Telefone:</strong> (15) 99717-4741 (Giancarlo)<br />(11) 94174-3352 (José de Carvalho)</p>
               </div>
               <p>
-                O Auditório Ignaz J. Sessler está localizado na região da Mooca,
-                com fácil acesso via transporte público e estacionamento disponível no local.
+                A Faculdade Uni Santana está localizada próxima ao Metrô Tietê (Linha Azul),
+                com fácil acesso via transporte público.
               </p>
             </div>
             <div className="location-map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.7412345678!2d-46.56789!3d-23.54321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce56a1234567b5%3A0xac9b08c372d56166!2sRua%20Bresser%2C%202315%20-%20Mooca%2C%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                src="https://www.google.com/maps?q=Rua%20Volunt%C3%A1rios%20da%20P%C3%A1tria%2C%20257%2C%20S%C3%A3o%20Paulo&output=embed"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -280,8 +281,6 @@ function App() {
               <ul>
                 <li>Acesso a todas as apresentações do dia</li>
                 <li>Intervalo com coffee break</li>
-                <li>Almoço incluído</li>
-                <li>Certificado de participação</li>
                 <li>Networking com saxofonistas profissionais</li>
               </ul>
               <p style={{ fontSize: '0.9rem', color: '#666', marginTop: '1rem' }}>
@@ -362,7 +361,8 @@ function Footer({ faqItems, expandedFaq, toggleFaq }) {
           <p>&copy; 2024 Noite de Gala do Saxofone. Todos os direitos reservados.</p>
           <p>
             Contato: <a href="mailto:eventos@saxofone.com">eventos@saxofone.com</a> |
-            <a href="tel:+5511300000000"> (11) 3000-0000</a>
+            <a href="tel:+5515997174741"> (15) 99717-4741</a> (Giancarlo) |
+            <a href="tel:+5511941743352"> (11) 94174-3352</a> (José de Carvalho)
           </p>
         </div>
       </div>
