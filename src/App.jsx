@@ -308,16 +308,30 @@ function App() {
 }
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const closeMenu = () => setIsMenuOpen(false)
+
   return (
     <header>
       <div className="header-content">
         <div className="logo">🎷 SAXOFONE</div>
-        <nav className="nav">
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#presentations">Apresentações</a></li>
-          <li><a href="#schedule">Cronograma</a></li>
-          <li><a href="#ticket">Ingresso</a></li>
+        <nav className={`nav${isMenuOpen ? ' nav-open' : ''}`}>
+          <li><a href="#about" onClick={closeMenu}>Sobre</a></li>
+          <li><a href="#presentations" onClick={closeMenu}>Apresentações</a></li>
+          <li><a href="#schedule" onClick={closeMenu}>Cronograma</a></li>
+          <li><a href="#ticket" onClick={closeMenu}>Ingresso</a></li>
         </nav>
+        <button
+          className={`menu-toggle${isMenuOpen ? ' menu-toggle-open' : ''}`}
+          onClick={() => setIsMenuOpen((open) => !open)}
+          aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={isMenuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
   )
