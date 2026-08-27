@@ -5,17 +5,20 @@ import amarildoPhoto from './assets/amarildo.jpeg'
 import ciasaxPhoto from './assets/ciasax.jpeg'
 import josePhoto from './assets/jose.png'
 
+const TICKET_URL = 'https://www.sympla.com.br/evento/1-encontro-do-grupo-sax-ccb-erudito-sacro/3555244?token=42e5ad53530a4ae93c15f3a154ceea4d'
+
+const SPONSOR_TIERS = [
+  { label: 'Patrocinar o Evento com R$ 15', url: 'https://www.sympla.com.br/evento/1-encontro-do-grupo-sax-ccb-erudito-sacro/3555244?token=2c6973b9c5386688db9e33da21ed6e22' },
+  { label: 'Patrocinar o Evento com R$ 30', url: 'https://www.sympla.com.br/evento/1-encontro-do-grupo-sax-ccb-erudito-sacro/3555244?token=af70fffde4e5893dc78e1e53f973acf7' },
+  { label: 'Patrocinar o Evento com R$ 50', url: 'https://www.sympla.com.br/evento/1-encontro-do-grupo-sax-ccb-erudito-sacro/3555244?token=f45e7e938dd59340c1f0ddf8d24e2940' }
+]
+
 function App() {
-  const [showThankYou, setShowThankYou] = useState(false)
   const [expandedFaq, setExpandedFaq] = useState(null)
+  const [showSponsorModal, setShowSponsorModal] = useState(false)
 
   const toggleFaq = (index) => {
     setExpandedFaq(expandedFaq === index ? null : index)
-  }
-
-  const handleTicketClick = () => {
-    setShowThankYou(true)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const faqItems = [
@@ -113,41 +116,6 @@ function App() {
       desc: 'Público geral que aprecia a sofisticação e excelência da música erudita'
     }
   ]
-
-  if (showThankYou) {
-    return (
-      <>
-        <Header />
-        <div className="thank-you-container">
-          <div className="thank-you-icon">🎉</div>
-          <div className="thank-you-content">
-            <h1>Obrigado pela sua compra!</h1>
-            <p>Seu ingresso foi confirmado e um e-mail de confirmação foi enviado para seu endereço de e-mail.</p>
-
-            <div className="confirmation-details">
-              <p><strong>Confirmação #:</strong> SAX-2024-001234</p>
-              <p><strong>Evento:</strong> Comemoração de 10 anos do Grupo: SAX CCB-ERUDITO-SACRO</p>
-              <p><strong>Data:</strong> [Data do evento]</p>
-              <p><strong>Horário:</strong> 08:00 às 17:00</p>
-              <p><strong>Local:</strong> Faculdade Uni Santana, Rua Voluntários da Pátria, 257</p>
-              <p><strong>Ingresso(s):</strong> 1 acesso completo</p>
-            </div>
-
-            <p>Você receberá seu QR code de acesso por e-mail. Apresente-o na entrada do teatro.</p>
-
-            <button
-              className="btn"
-              onClick={() => setShowThankYou(false)}
-              style={{ marginTop: '2rem' }}
-            >
-              Voltar à página principal
-            </button>
-          </div>
-        </div>
-        <Footer faqItems={faqItems} expandedFaq={expandedFaq} toggleFaq={toggleFaq} />
-      </>
-    )
-  }
 
   return (
     <>
@@ -277,7 +245,10 @@ function App() {
           <div className="ticket-container">
             <div className="ticket-info">
               <h3>Acesso Completo ao Encontro</h3>
-              <div className="ticket-price">R$ 120,00</div>
+              <div className="ticket-price">R$ 125,00</div>
+              <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '-1.2rem', marginBottom: '1.5rem' }}>
+                + R$ 12,50 de taxas da plataforma
+              </p>
               <ul>
                 <li>Acesso a todas as apresentações do dia</li>
                 <li>Intervalo com coffee break</li>
@@ -287,12 +258,49 @@ function App() {
                 Um dia inteiro de música erudita e aprendizado
               </p>
             </div>
-            <button className="btn" onClick={handleTicketClick}>
+            <a className="btn" href={TICKET_URL} target="_blank" rel="noopener noreferrer">
               Garantir seu Lugar
+            </a>
+            <button
+              className="btn btn-support"
+              onClick={() => setShowSponsorModal(true)}
+            >
+              Não irei presencial mas quero apoiar o projeto
             </button>
           </div>
         </div>
       </section>
+
+      {showSponsorModal && (
+        <div className="modal-overlay" onClick={() => setShowSponsorModal(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="modal-close"
+              onClick={() => setShowSponsorModal(false)}
+              aria-label="Fechar"
+            >
+              ×
+            </button>
+            <h3>Apoie o Projeto</h3>
+            <div className="sponsor-options">
+              {SPONSOR_TIERS.map((tier) => (
+                <a
+                  key={tier.url}
+                  className="btn"
+                  href={tier.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {tier.label}
+                </a>
+              ))}
+            </div>
+            <p className="sponsor-disclaimer">
+              O Patrocínio não garante ingresso ou entrada. É uma forma da comunidade apoiar o evento acontecer mesmo à distância.
+            </p>
+          </div>
+        </div>
+      )}
 
       <Footer faqItems={faqItems} expandedFaq={expandedFaq} toggleFaq={toggleFaq} />
     </>

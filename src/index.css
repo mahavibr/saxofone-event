@@ -895,6 +895,87 @@ section h2 {
   }
 }
 
+.btn-support {
+  background: transparent;
+  color: var(--text);
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 500;
+  padding: 0.85rem 1.8rem;
+  margin-top: 1.2rem;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.03);
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+/* Sponsor Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+  h3 {
+    color: var(--text-h);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-light);
+
+  &:hover {
+    color: var(--text);
+  }
+}
+
+.sponsor-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+
+  .btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.sponsor-disclaimer {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 1.5rem;
+  line-height: 1.5;
+}
+
 /* Footer */
 footer {
   background: linear-gradient(135deg, #0A0A0A, #1A1A1A);
