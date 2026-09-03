@@ -3,7 +3,7 @@ import './App.css'
 import giancarloPhoto from './assets/giancarlo.jpg'
 import amarildoPhoto from './assets/amarildo.jpeg'
 import ciasaxPhoto from './assets/ciasax.jpeg'
-import josePhoto from './assets/jose.png'
+import josePhoto from './assets/jose.jpeg'
 
 const TICKET_URL = 'https://www.sympla.com.br/evento/1-encontro-do-grupo-sax-ccb-erudito-sacro/3555244?token=42e5ad53530a4ae93c15f3a154ceea4d'
 
