@@ -16,6 +16,7 @@ const SPONSOR_TIERS = [
 function App() {
   const [expandedFaq, setExpandedFaq] = useState(null)
   const [showSponsorModal, setShowSponsorModal] = useState(false)
+  const [selectedPresenter, setSelectedPresenter] = useState(null)
 
   const toggleFaq = (index) => {
     setExpandedFaq(expandedFaq === index ? null : index)
@@ -53,24 +54,28 @@ function App() {
       name: 'O Saxofone que Venceu o Tempo',
       role: 'Com Giancarlo Medeiros',
       bio: 'Uma reflexão sobre a trajetória do saxofone erudito e sua permanência ao longo das décadas.',
+      fullBio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       photo: giancarloPhoto
     },
     {
       name: 'Como ser uma Referência Sonora',
       role: 'Com Amarildo Nascimento',
       bio: 'Caminhos e práticas para desenvolver uma sonoridade autêntica e marcante ao saxofone.',
+      fullBio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       photo: amarildoPhoto
     },
     {
       name: 'Concerto Especial',
       role: 'CiaSax',
       bio: 'Apresentação musical especial em celebração aos 10 anos do Grupo SAX CCB-ERUDITO-SACRO.',
+      fullBio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
       photo: ciasaxPhoto
     },
     {
       name: 'A Arte de Tocar Junto',
       role: 'Com José de Carvalho',
       bio: 'Afinação Coletiva, Equilíbrio sonoro e escuta ativa. Realizando aplicação prática nos hinos com Giancarlo Medeiros.',
+      fullBio: 'Como saxofonista, José de Carvalho integra ativamente a Banda Filarmônica de São Paulo, o Grupo AUM e o Duo Villaniando. Atua também como spalla e maestro assistente na Banda Municipal de Embu das Artes. Sua trajetória artística inclui atividades internacionais e colaborações como solista em orquestras de prestígio, como a Bachiana Filarmônica e a Orquestra Filarmônica de Santo Amaro (OFISA). Na esfera acadêmica, é doutor em Música (área de Teoria e Prática da Interpretação) pela Universidade Federal do Estado do Rio de Janeiro (UNIRIO), além de mestre e pós-doutorando pela Universidade de São Paulo (USP), com linha de pesquisa voltada ao saxofone na obra de Heitor Villa-Lobos. Atualmente, concilia a atuação artística nos palcos com a docência como professor concursado de saxofone no Conservatório de Cubatão.',
       photo: josePhoto
     }
   ]
@@ -162,11 +167,33 @@ function App() {
                 <h3>{presentation.name}</h3>
                 <p className="artist-role">{presentation.role}</p>
                 <p>{presentation.bio}</p>
+                <button
+                  className="btn btn-who"
+                  onClick={() => setSelectedPresenter(presentation)}
+                >
+                  Quem é?
+                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {selectedPresenter && (
+        <div className="modal-overlay" onClick={() => setSelectedPresenter(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="modal-close"
+              onClick={() => setSelectedPresenter(null)}
+              aria-label="Fechar"
+            >
+              ×
+            </button>
+            <h3>{selectedPresenter.role.replace(/^Com\s+/, '') || selectedPresenter.name}</h3>
+            <p>{selectedPresenter.fullBio}</p>
+          </div>
+        </div>
+      )}
 
       <section id="schedule">
         <div className="container">

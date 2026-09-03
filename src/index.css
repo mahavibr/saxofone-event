@@ -956,6 +956,28 @@ section h2 {
   }
 }
 
+.btn-who {
+  display: inline-block;
+  align-self: center;
+  margin: 0 1.5rem 1.5rem;
+  padding: 0.6rem 1.6rem;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--accent);
+    color: var(--white);
+  }
+}
+
 .btn-support {
   background: transparent;
   color: var(--text);
