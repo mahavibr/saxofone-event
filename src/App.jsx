@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import giancarloPhoto from './assets/giancarlo.jpg'
+import giancarloPhoto from './assets/gian.jpg'
 import amarildoPhoto from './assets/amarildo.jpeg'
 import ciasaxPhoto from './assets/ciasax.jpeg'
 import josePhoto from './assets/jose.jpeg'
@@ -102,7 +102,8 @@ function App() {
       role: 'Com Giancarlo Medeiros',
       bio: 'Uma reflexão sobre a trajetória do saxofone erudito e sua permanência ao longo das décadas.',
       fullBio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      photo: giancarloPhoto
+      photo: giancarloPhoto,
+      photoPosition: 'center top'
     },
     {
       name: 'Como ser uma Referência Sonora',
@@ -209,7 +210,7 @@ function App() {
             {presentations.map((presentation, idx) => (
               <div key={idx} className="artist-card">
                 <div className="artist-photo">
-                  <img src={presentation.photo} alt={presentation.name} />
+                  <img src={presentation.photo} alt={presentation.name} style={{ objectPosition: presentation.photoPosition }} />
                 </div>
                 <h3>{presentation.name}</h3>
                 <p className="artist-role">{presentation.role}</p>
