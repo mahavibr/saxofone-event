@@ -4,6 +4,14 @@ import giancarloPhoto from './assets/giancarlo.jpg'
 import amarildoPhoto from './assets/amarildo.jpeg'
 import ciasaxPhoto from './assets/ciasax.jpeg'
 import josePhoto from './assets/jose.jpeg'
+import barkleyLogo from './assets/brands/barkley-logo.png'
+import barkleyImage from './assets/brands/barkley-boquilhas.jpg'
+import intermezzoLogo from './assets/brands/intermezzo-logo.png'
+import intermezzoImage from './assets/brands/intermezzo-loja.jpg'
+import pontoMusicalLogo from './assets/brands/ponto-musical-logo.png'
+import pontoMusicalImage from './assets/brands/ponto-musical-sax.jpg'
+import tokaiLogo from './assets/brands/tokai-logo.png'
+import tokaiImage from './assets/brands/tokai-saxofones.jpg'
 
 const TICKET_URL = 'https://www.sympla.com.br/evento/1-encontro-do-grupo-sax-ccb-erudito-sacro/3555244?token=42e5ad53530a4ae93c15f3a154ceea4d'
 
@@ -11,6 +19,45 @@ const SPONSOR_TIERS = [
   { label: 'Patrocinar o Evento com R$ 15', url: 'https://www.sympla.com.br/evento/1-encontro-do-grupo-sax-ccb-erudito-sacro/3555244?token=2c6973b9c5386688db9e33da21ed6e22' },
   { label: 'Patrocinar o Evento com R$ 30', url: 'https://www.sympla.com.br/evento/1-encontro-do-grupo-sax-ccb-erudito-sacro/3555244?token=af70fffde4e5893dc78e1e53f973acf7' },
   { label: 'Patrocinar o Evento com R$ 50', url: 'https://www.sympla.com.br/evento/1-encontro-do-grupo-sax-ccb-erudito-sacro/3555244?token=f45e7e938dd59340c1f0ddf8d24e2940' }
+]
+
+const BRANDS = [
+  {
+    name: 'Barkley',
+    tagline: 'Boquilhas finalizadas à mão',
+    desc: 'Fundada em 2003 em São Paulo por Junior Barkley, cria boquilhas para saxofone e clarinete que unem materiais de alta tecnologia ao acabamento artesanal, peça por peça.',
+    logo: barkleyLogo,
+    image: barkleyImage,
+    imagePosition: 'center',
+    url: 'https://barkley.com.br/'
+  },
+  {
+    name: 'Intermezzo',
+    tagline: 'Instrumentos musicais desde 1959',
+    desc: 'Uma das maiores lojas de instrumentos musicais do Brasil, com mais de 60 anos de história. Além da loja no Itaim Bibi, reúne escola de música, estúdios e aluguel de instrumentos.',
+    logo: intermezzoLogo,
+    image: intermezzoImage,
+    imagePosition: 'center 70%',
+    url: 'https://www.intermezzo.com.br/'
+  },
+  {
+    name: 'Ponto Musical',
+    tagline: 'Especialista em instrumentos de sopro',
+    desc: 'Loja paulistana com mais de 10 anos dedicados aos sopros: saxofones, clarinetes, flautas e metais, além de boquilhas, palhetas e acessórios, com envio para todo o Brasil.',
+    logo: pontoMusicalLogo,
+    image: pontoMusicalImage,
+    imagePosition: 'center',
+    url: 'https://www.pontomusical.com.br/'
+  },
+  {
+    name: 'Tokai',
+    tagline: 'Tradição em instrumentos musicais',
+    desc: 'Há mais de quatro décadas no mercado brasileiro, conhecida por órgãos e pianos digitais, oferece uma linha completa de saxofones, madeiras e metais para estudantes e profissionais.',
+    logo: tokaiLogo,
+    image: tokaiImage,
+    imagePosition: 'right center',
+    url: 'https://tokai.com.br/'
+  }
 ]
 
 function App() {
@@ -195,6 +242,40 @@ function App() {
         </div>
       )}
 
+      <section className="brands-section" id="brands">
+        <div className="container">
+          <h2>Marcas Presentes no Evento</h2>
+          <p className="brands-intro">
+            Empresas que acreditam na música e estarão conosco nesta celebração, apresentando instrumentos,
+            boquilhas e acessórios para você conhecer de perto.
+          </p>
+          <div className="brands-grid">
+            {BRANDS.map((brand) => (
+              <a
+                key={brand.name}
+                className="brand-card"
+                href={brand.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="brand-image">
+                  <img src={brand.image} alt={`${brand.name} — ${brand.tagline}`} style={{ objectPosition: brand.imagePosition }} loading="lazy" />
+                </div>
+                <div className="brand-logo">
+                  <img src={brand.logo} alt={`Logotipo ${brand.name}`} loading="lazy" />
+                </div>
+                <div className="brand-body">
+                  <h3>{brand.name}</h3>
+                  <p className="brand-tagline">{brand.tagline}</p>
+                  <p>{brand.desc}</p>
+                  <span className="brand-link">Visitar site →</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="schedule">
         <div className="container">
           <h2>Cronograma do Evento</h2>
@@ -346,6 +427,7 @@ function Header() {
         <nav className={`nav${isMenuOpen ? ' nav-open' : ''}`}>
           <li><a href="#about" onClick={closeMenu}>Sobre</a></li>
           <li><a href="#presentations" onClick={closeMenu}>Apresentações</a></li>
+          <li><a href="#brands" onClick={closeMenu}>Marcas</a></li>
           <li><a href="#schedule" onClick={closeMenu}>Cronograma</a></li>
           <li><a href="#ticket" onClick={closeMenu}>Ingresso</a></li>
         </nav>
@@ -365,26 +447,25 @@ function Header() {
 }
 
 function Footer({ faqItems, expandedFaq, toggleFaq }) {
-  const sponsors = [
-    { name: 'Spotify', color: '#1DB954' },
-    { name: 'Yamaha', color: '#000000' },
-    { name: 'Roland', color: '#FF6600' },
-    { name: 'JBL', color: '#0066CC' }
-  ]
-
   return (
     <footer>
       <div className="footer-content">
         <section className="sponsors-section">
           <h3>Parceiros Oficiais</h3>
           <div className="sponsors-grid">
-            {sponsors.map((sponsor, idx) => (
-              <div key={idx} className="sponsor-badge">
-                <div className="sponsor-logo" style={{ backgroundColor: sponsor.color }}>
-                  {sponsor.name.charAt(0)}
+            {BRANDS.map((brand) => (
+              <a
+                key={brand.name}
+                className="sponsor-badge"
+                href={brand.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="sponsor-logo">
+                  <img src={brand.logo} alt={`Logotipo ${brand.name}`} loading="lazy" />
                 </div>
-                <p>{sponsor.name}</p>
-              </div>
+                <p>{brand.name}</p>
+              </a>
             ))}
           </div>
         </section>
