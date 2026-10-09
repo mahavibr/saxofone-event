@@ -355,9 +355,6 @@ function App() {
             <div className="ticket-info">
               <h3>Acesso Completo ao Encontro</h3>
               <div className="ticket-price">R$ 125,00</div>
-              <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '-1.2rem', marginBottom: '1.5rem' }}>
-                + R$ 12,50 de taxas da plataforma
-              </p>
               <ul>
                 <li>Acesso a todas as apresentações do dia</li>
                 <li>Intervalo com coffee break</li>
