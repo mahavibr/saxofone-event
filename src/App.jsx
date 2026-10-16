@@ -101,7 +101,7 @@ function App() {
       name: 'O Saxofone que Venceu o Tempo',
       role: 'Com Giancarlo Medeiros',
       bio: 'Uma reflexão sobre a trajetória do saxofone erudito e sua permanência ao longo das décadas.',
-      fullBio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      fullBio: 'Mestre em Música pela Universidade Federal do Rio de Janeiro (UFRJ), pós-graduado em Educação Musical, licenciado em Música e em Pedagogia, e diplomado em saxofone pelo Conservatório de Tatuí. Desenvolve intensa pesquisa sobre o repertório brasileiro para saxofone barítono, resultando até o momento em 13 obras originalmente escritas e dedicadas a ele por compositores como Liduíno Pitombeira, Hudson Nogueira, Edmundo Villani-Côrtes, Fernando de Oliveira e Jackson Lúcio, entre outros. Foi jurado do Concurso para Estudantes de Saxofone Clássico Marcel Mule (México, 2013). Atuou como professor convidado na Oficina Técnica Itinerante para Maestros e Músicos de Banda – Coreto Paulista (2014), no 1º (2017) e 2º ADFEST (2019), em Sorocaba (SP), e no Taller Sinfónico – Saxofone da Universidad del Cauca (Colômbia, 2021). Como integrante do Quarteto SaxBrasil, venceu o Concurso Latino-Americano Rosa Mística (Curitiba, 2009). Participou como artista convidado do I Encontro Internacional de Quartetos de Saxofones, em Montevidéu (Uruguai, 2012); do I Encontro Internacional de Saxofonistas, em La Pampa (Argentina, 2012); do XII Encontro Internacional de Saxofone (México, 2013); do 3º Festival Internacional de Saxofone (Colômbia, 2019); do IV Encontro Internacional de Saxofonistas de Brasília (2024); e do I Encontro de Saxofonistas da Baixada Santista e Litoral (2025). Em 2019, gravou o CD Quarteto de Saxofones SaxBrasil – 10 anos. Atualmente é professor de saxofone no Conservatório de Tatuí e na Escola Municipal de Música de Alumínio (SP), além de integrar o Duo Aracê, o Quarteto SaxBrasil e a Banda Sinfônica do Conservatório de Tatuí.',
       photo: giancarloPhoto,
       photoPosition: 'center top'
     },
@@ -109,14 +109,51 @@ function App() {
       name: 'Como ser uma Referência Sonora',
       role: 'Com Amarildo Nascimento',
       bio: 'Caminhos práticos para desenvolver uma sonoridade autêntica através de exercícios e técnicas de respiração',
-      fullBio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      fullBio: `Amarildo Nascimento é trompetista solista da Orquestra Sinfônica da Universidade de São Paulo (OSUSP) e fundador da Orquestra Acadêmica de São Paulo/Uniopera, onde também atua como trompete solo. Desenvolve intensa atividade artística como solista e camerista, sendo membro do São Paulo Brass Trio e artista Conn/Selmer, representando os trompetes Vincent Bach.
+
+Atualmente é doutorando em Música pela Universidade de São Paulo (USP), instituição na qual também obteve o título de Mestre em Música. Possui especializações lato sensu em Educação Musical e em Pedagogia e Performance em Instrumentos de Metais, além de graduação em Música com habilitação em Trompete. É reconhecido como especialista em respiração aplicada à performance musical, com foco no desenvolvimento técnico e expressivo de instrumentistas de sopro, área na qual desenvolve pesquisas e ministra formações.
+
+Entre 2010 e 2019, atuou como professor de Trompete e Música de Câmara no curso de Bacharelado em Música da Faculdade Cantareira (SP), contribuindo significativamente para a formação de novos músicos em nível superior. Sua prática pedagógica está fortemente alicerçada na integração entre aspectos fisiológicos, musicais e interpretativos, com ênfase no uso consciente da respiração como base para o domínio técnico e expressivo do instrumento.
+
+Na área da pesquisa acadêmica, é autor de três artigos científicos e do livro Bachianas Brasileiras de Villa-Lobos: compilação de excertos e estratégias de estudo na esfera da orquestra sinfônica, publicado pela Editora Diálogo Freiriano. Seus estudos combinam abordagens analíticas, pedagógicas e interpretativas voltadas ao repertório orquestral brasileiro e à formação de trompetistas.
+
+Como solista, atuou frente a diversas orquestras de renome, tais como: Orquestra Sinfônica da Universidade de São Paulo (OSUSP), Orquestra Filarmônica de Montevidéu, Orquestra Acadêmica de São Paulo, Orquestra de Câmara da USP (OCAM), Banda Sinfônica Jovem do Estado de São Paulo (BSJESP), entre outras.
+
+Sua atuação em música de câmara inclui recitais com o São Paulo Brass Trio e apresentações em duo com piano. Em 2017, participou da 42ª Conferência Anual da International Trumpet Guild (ITG), nos Estados Unidos, ocasião em que estreou a obra Abril Desconhecido, de Celso Mojola, composta em sua homenagem.
+
+Como músico convidado, atuou junto a importantes orquestras brasileiras, entre as quais se destacam: Orquestra Sinfônica do Estado de São Paulo (OSESP), Orquestra Sinfônica Municipal de São Paulo, Orquestra Sinfônica Brasileira, Orquestra Filarmônica de Goiás, entre outras. No campo da música aplicada, participou como primeiro trompete da produção brasileira do musical A Bela e a Fera (2009) e integrou a equipe de músicos da trilha sonora do filme Salve Geral (2009), dirigido por Sérgio Rezende — obra representante do Brasil no Oscar de Melhor Filme Estrangeiro e vencedora do Festival de Cinema Brasileiro de Miami.
+
+Entre 2001 e 2009, integrou o naipe de trompetes da Orquestra Experimental de Repertório. Atuou também como trompetista da Banda Sinfônica Jovem do Estado de São Paulo entre 1998 e 2001.
+
+Sua formação internacional inclui participação em festivais e seminários como o Camarão Brass and Percussion (Natal, 2018), onde teve aulas com Ole Edvard Antonsen; e o Music Seminars in Tuscany (Itália, 2015), estudando com Reinhold Friedrich e Kristian Steenstrup. Atuou como recitalista e solista convidado no 7º e 8º Encontro Internacional de Trompetistas da Associação Brasileira de Trompetistas (ABT).
+
+Como professor convidado, ministrou masterclasses e oficinas em diversos festivais e instituições no Brasil e no exterior, como o Urubrass (2018 e 2019), Festival MI (Ceará), Festival de Música de Barra Mansa (RJ), e na Universidade da Flórida (EUA), onde apresentou masterclass e recital em 2018.
+
+Ao longo de sua trajetória, participou de masterclasses com trompetistas de renome internacional, dentre os quais se destacam:
+• Phillip Smith (New York Philharmonic)
+• Fred Mills (Canadian Brass)
+• Malte Burba (Alemanha)
+• Ole Edvard Antonsen (Noruega)
+• Mathias Höfs (German Brass)
+• Martin Hurrel (BBC London)
+• Rex Richardson (London’s Trinity College of Music)
+• Russel DeVuyst (Orchestre Symphonique de Montréal)
+• Marc Reese (Empire Brass)
+• Paul Merkelo (Orchestre Symphonique de Montréal)
+• Pacho Flores (Venezuela - Solista internacional)
+• Martin Angerer (Alemanha)
+• Friedemann Immer (Alemanha)
+
+Sua atuação se destaca pela integração entre excelência artística, prática pedagógica e investigação acadêmica, com ênfase nas práticas interpretativas para instrumentos de sopro, na pesquisa sobre o repertório sinfônico brasileiro e na aplicação da técnica respiratória como elemento central da performance musical.`,
       photo: amarildoPhoto
     },
     {
       name: 'Concerto Especial',
       role: 'CiaSax',
       bio: 'Apresentação musical especial em celebração aos 10 anos do Grupo SAX CCB-ERUDITO-SACRO.',
-      fullBio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      fullBio: `O Cia.Sax atua desde o ano de 2017 em diversos festivais e masterclasses, diversificando a música erudita para quarteto de saxofones para todos aqueles que querem ouvir novas sonoridades.
+
+O grupo participou de masterclasses com renomados saxofonistas, de grandes festivais, como Gramado in Concert, 2º Festival de Verão de Campos do Jordão, do Núcleo de Desenvolvimento de Carreira, da EMESP Tom Jobim, e no ano de 2023 foi vencedor do Concurso Jovens Solistas da Banda Sinfônica Jovem do Estado de São Paulo.`,
       photo: ciasaxPhoto
     },
     {
