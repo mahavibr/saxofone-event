@@ -373,6 +373,37 @@ header {
   }
 }
 
+.hero-date {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.6rem;
+  border: 1px solid var(--accent-gold);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+
+  @media (max-width: 480px) {
+    font-size: 0.95rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+.section-date {
+  text-align: center;
+  margin: -2.5rem 0 3rem;
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  @media (max-width: 768px) {
+    margin: -1.5rem 0 2rem;
+  }
+}
+
 /* Hero Video Section */
 .hero-video-section {
   background: var(--white);

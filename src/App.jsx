@@ -72,7 +72,7 @@ function App() {
   const faqItems = [
     {
       question: 'Qual é a data e local do evento?',
-      answer: 'A Comemoração de 10 anos do Grupo SAX CCB-ERUDITO-SACRO ocorre na Faculdade Uni Santana, localizada na Rua Voluntários da Pátria, 257 - Próximo ao Metrô Tietê (Linha Azul). A data e horário completos estão disponíveis na seção de cronograma.'
+      answer: 'A Comemoração de 10 anos do Grupo SAX CCB-ERUDITO-SACRO ocorre na Faculdade Uni Santana, localizada na Rua Voluntários da Pátria, 257 - Próximo ao Metrô Tietê (Linha Azul). O evento acontece no sábado, 21 de novembro de 2026, a partir das 08:00. A programação completa está disponível na seção de cronograma.'
     },
     {
       question: 'Quantos ingressos posso comprar?',
@@ -215,6 +215,7 @@ O grupo participou de masterclasses com renomados saxofonistas, de grandes festi
         <div className="hero-content">
           <h1>Comemoração de 10 anos do Grupo: SAX CCB-ERUDITO-SACRO</h1>
           <p className="hero-subtitle">Um dia inteiro celebrando a excelência do saxofone erudito</p>
+          <p className="hero-date">Sábado, 21 de novembro de 2026</p>
         </div>
       </section>
 
@@ -228,7 +229,7 @@ O grupo participou de masterclasses com renomados saxofonistas, de grandes festi
               onde a excelência musical encontra a sofisticação.
             </p>
             <p>
-              Durante um dia inteiro, o público poderá desfrutar de apresentações de alta qualidade, explorando o repertório
+              No sábado, 21 de novembro de 2026, o público poderá desfrutar, durante um dia inteiro, de apresentações de alta qualidade, explorando o repertório
               erudito do saxofone e conhecendo os melhores talentos da cena musical brasileira. É uma oportunidade única de
               imersão na arte do saxofone.
             </p>
@@ -317,6 +318,7 @@ O grupo participou de masterclasses com renomados saxofonistas, de grandes festi
       <section id="schedule">
         <div className="container">
           <h2>Cronograma do Evento</h2>
+          <p className="section-date">Sábado, 21 de novembro de 2026</p>
           <div className="schedule-container">
             {schedule.map((item, idx) => (
               <div key={idx} className="schedule-item">
@@ -365,6 +367,7 @@ O grupo participou de masterclasses com renomados saxofonistas, de grandes festi
             <div className="location-info">
               <h3>Faculdade Uni Santana</h3>
               <div className="location-details">
+                <p><strong>Data:</strong> Sábado, 21/11/2026, a partir das 08:00</p>
                 <p><strong>Endereço:</strong> Rua Voluntários da Pátria, 257<br />Próximo ao Metrô Tietê (Linha Azul)</p>
                 <p><strong>Telefone:</strong> (15) 99717-4741 (Giancarlo)<br />(11) 94174-3352 (José de Carvalho)</p>
               </div>
