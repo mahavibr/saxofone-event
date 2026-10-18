@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import giancarloPhoto from './assets/gian.jpg'
 import amarildoPhoto from './assets/amarildo.jpeg'
-import ciasaxPhoto from './assets/ciasax.jpeg'
+import ciasaxPhoto from './assets/grupociasaxatual.jpeg'
 import josePhoto from './assets/jose.jpeg'
 import barkleyLogo from './assets/brands/barkley-logo.png'
 import barkleyImage from './assets/brands/barkley-boquilhas.jpg'
@@ -88,7 +88,7 @@ function App() {
     },
     {
       question: 'Está incluso almoço?',
-      answer: 'O almoço não está incluso no ingresso. No local há restaurante disponível da própria Faculdade Uni Santana, além de outras opções de almoço na região.'
+      answer: 'Sim! O almoço está incluso no ingresso, assim como o café da manhã.'
     },
     {
       question: 'Como faço para receber o ingresso eletrônico?',
@@ -153,14 +153,21 @@ Sua atuação se destaca pela integração entre excelência artística, prátic
       bio: 'Apresentação musical especial em celebração aos 10 anos do Grupo SAX CCB-ERUDITO-SACRO.',
       fullBio: `O Cia.Sax atua desde o ano de 2017 em diversos festivais e masterclasses, diversificando a música erudita para quarteto de saxofones para todos aqueles que querem ouvir novas sonoridades.
 
-O grupo participou de masterclasses com renomados saxofonistas, de grandes festivais, como Gramado in Concert, 2º Festival de Verão de Campos do Jordão, do Núcleo de Desenvolvimento de Carreira, da EMESP Tom Jobim, e no ano de 2023 foi vencedor do Concurso Jovens Solistas da Banda Sinfônica Jovem do Estado de São Paulo.`,
-      photo: ciasaxPhoto
+O grupo participou de masterclasses com renomados saxofonistas, de grandes festivais, como Gramado in Concert, 2º Festival de Verão de Campos do Jordão, do Núcleo de Desenvolvimento de Carreira, da EMESP Tom Jobim, e no ano de 2023 foi vencedor do Concurso Jovens Solistas da Banda Sinfônica Jovem do Estado de São Paulo.
+
+Formação:
+Soprano: Gabriel Fanzeres
+Alto: Arthur Coutinho
+Tenor: Matheus Carvalho
+Barítono: Bruno Khaleb`,
+      photo: ciasaxPhoto,
+      photoPosition: 'center 25%'
     },
     {
       name: 'A Arte de Tocar Junto',
       role: 'Com José de Carvalho',
       bio: 'Afinação Coletiva, Equilíbrio sonoro e escuta ativa. Realizando aplicação prática nos hinos com Giancarlo Medeiros.',
-      fullBio: 'Como saxofonista, José de Carvalho integra ativamente a Banda Filarmônica de São Paulo, o Grupo AUM e o Duo Villaniando. Atua também como spalla e maestro assistente na Banda Municipal de Embu das Artes. Sua trajetória artística inclui atividades internacionais e colaborações como solista em orquestras de prestígio, como a Bachiana Filarmônica e a Orquestra Filarmônica de Santo Amaro (OFISA). Na esfera acadêmica, é doutor em Música (área de Teoria e Prática da Interpretação) pela Universidade Federal do Estado do Rio de Janeiro (UNIRIO), além de mestre e pós-doutorando pela Universidade de São Paulo (USP), com linha de pesquisa voltada ao saxofone na obra de Heitor Villa-Lobos. Atualmente, concilia a atuação artística nos palcos com a docência como professor concursado de saxofone no Conservatório de Cubatão.',
+      fullBio: `Natural de Matias Olímpio - Piauí, José de Carvalho é doutor em Música pela Universidade Federal do Estado do Rio de Janeiro - UNIRIO na área de Teoria e Prática da Interpretação Musical e mestre pela Universidade de São Paulo - USP, na área de Teoria e Análise Musical, ambas as pesquisas financiadas pela CAPES. Atualmente, desenvolve pesquisa de pós-doutorado na USP sobre o tema, ''Do Índio Feio ao Capadócio'': Interações onomatopaicas entre primitivismo e o moderno na representação do saxofone em Villa-Lobos. Possui experiência no ensino superior e na gestão acadêmica, tendo atuado como professor e coordenador no Centro Universitário Sant'Anna e como editor assistente da Revista Música (ECA/USP). É professor concursado de saxofone no Conservatório de Cubatão e Maestro Assistente da Banda Municipal de Embu das Artes. Como instrumentista, integra a Banda Filarmônica de São Paulo, o Grupo AUM e o Duo Villaniando. Sua trajetória artística inclui premiação em concurso de música de câmara, colaborações com orquestras e bandas sinfônicas, além de apresentações internacionais e publicações nas áreas de Teoria e Prática da Interpretação, Educação Musical e Análise Musical.`,
       photo: josePhoto
     }
   ]
@@ -397,8 +404,12 @@ O grupo participou de masterclasses com renomados saxofonistas, de grandes festi
               <div className="ticket-price">R$ 125,00</div>
               <ul>
                 <li>Acesso a todas as apresentações do dia</li>
-                <li>Intervalo com coffee break</li>
-                <li>Networking com saxofonistas profissionais</li>
+                <li>Café da Manhã incluso</li>
+                <li>Almoço incluso</li>
+                <li>Material Didático do dia</li>
+                <li>Fotos e Mural do Evento</li>
+                <li>Momento de Conexão com Amigos</li>
+                <li>Acesso aos Expositores</li>
               </ul>
               <p style={{ fontSize: '0.9rem', color: '#666', marginTop: '1rem' }}>
                 Um dia inteiro de música erudita e aprendizado
@@ -461,7 +472,7 @@ function Header() {
   return (
     <header>
       <div className="header-content">
-        <div className="logo">🎷 SAXOFONE</div>
+        <div className="logo">🎷 Grupo Sax</div>
         <nav className={`nav${isMenuOpen ? ' nav-open' : ''}`}>
           <li><a href="#about" onClick={closeMenu}>Sobre</a></li>
           <li><a href="#presentations" onClick={closeMenu}>Apresentações</a></li>
