@@ -464,7 +464,7 @@ Barítono: Bruno Khaleb`,
   )
 }
 
-function Header() {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const closeMenu = () => setIsMenuOpen(false)
@@ -472,13 +472,14 @@ function Header() {
   return (
     <header>
       <div className="header-content">
-        <div className="logo">🎷 Grupo Sax</div>
+        <a className="logo" href="/">🎷 Grupo Sax</a>
         <nav className={`nav${isMenuOpen ? ' nav-open' : ''}`}>
-          <li><a href="#about" onClick={closeMenu}>Sobre</a></li>
-          <li><a href="#presentations" onClick={closeMenu}>Apresentações</a></li>
-          <li><a href="#brands" onClick={closeMenu}>Marcas</a></li>
-          <li><a href="#schedule" onClick={closeMenu}>Cronograma</a></li>
-          <li><a href="#ticket" onClick={closeMenu}>Ingresso</a></li>
+          <li><a href="/#about" onClick={closeMenu}>Sobre</a></li>
+          <li><a href="/#presentations" onClick={closeMenu}>Apresentações</a></li>
+          <li><a href="/#brands" onClick={closeMenu}>Marcas</a></li>
+          <li><a href="/#schedule" onClick={closeMenu}>Cronograma</a></li>
+          <li><a href="/#ticket" onClick={closeMenu}>Ingresso</a></li>
+          <li><a href="/fotos" onClick={closeMenu}>Fotos</a></li>
         </nav>
         <button
           className={`menu-toggle${isMenuOpen ? ' menu-toggle-open' : ''}`}
