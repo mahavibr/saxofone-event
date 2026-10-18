@@ -76,7 +76,7 @@ function App() {
     },
     {
       question: 'Quantos ingressos posso comprar?',
-      answer: 'Você pode comprar até 10 ingressos por transação. Para quantidades maiores ou grupos organizados, entre em contato pelo email encontrosaxofone@gmail.com.'
+      answer: 'Você pode comprar até 10 ingressos por transação. Para quantidades maiores ou grupos organizados, entre em contato pelo WhatsApp com os organizadores: (15) 99717-4741 (Giancarlo) ou (11) 94174-3352 (José de Carvalho).'
     },
     {
       question: 'Há desconto para grupos?',
@@ -84,7 +84,7 @@ function App() {
     },
     {
       question: 'O evento é acessível para pessoas com deficiência?',
-      answer: 'Se necessitar de acomodações especiais, entre em contato pelo email encontrosaxofone@gmail.com com antecedência.'
+      answer: 'Se necessitar de acomodações especiais, entre em contato com antecedência pelo WhatsApp com os organizadores: (15) 99717-4741 (Giancarlo) ou (11) 94174-3352 (José de Carvalho).'
     },
     {
       question: 'Está incluso almoço?',
@@ -376,7 +376,7 @@ Barítono: Bruno Khaleb`,
               <div className="location-details">
                 <p><strong>Data:</strong> Sábado, 21/11/2026, a partir das 08:00</p>
                 <p><strong>Endereço:</strong> Rua Voluntários da Pátria, 257<br />Próximo ao Metrô Tietê (Linha Azul)</p>
-                <p><strong>Telefone:</strong> (15) 99717-4741 (Giancarlo)<br />(11) 94174-3352 (José de Carvalho)</p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/5515997174741" target="_blank" rel="noopener noreferrer">(15) 99717-4741</a> (Giancarlo)<br /><a href="https://wa.me/5511941743352" target="_blank" rel="noopener noreferrer">(11) 94174-3352</a> (José de Carvalho)</p>
               </div>
               <p>
                 A Faculdade Uni Santana está localizada próxima ao Metrô Tietê (Linha Azul),
@@ -537,7 +537,7 @@ function Footer({ faqItems, expandedFaq, toggleFaq }) {
         </section>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 Noite de Gala do Saxofone. Todos os direitos reservados.</p>
+          <p>&copy; 2026 Grupo SAX CCB-ERUDITO-SACRO. Todos os direitos reservados.</p>
           <p>
             WhatsApp:
             <a href="https://wa.me/5515997174741" target="_blank" rel="noopener noreferrer"> (15) 99717-4741</a> (Giancarlo) |
