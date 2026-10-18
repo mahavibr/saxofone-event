@@ -539,9 +539,9 @@ function Footer({ faqItems, expandedFaq, toggleFaq }) {
         <div className="footer-bottom">
           <p>&copy; 2024 Noite de Gala do Saxofone. Todos os direitos reservados.</p>
           <p>
-            Contato: <a href="mailto:eventos@saxofone.com">eventos@saxofone.com</a> |
-            <a href="tel:+5515997174741"> (15) 99717-4741</a> (Giancarlo) |
-            <a href="tel:+5511941743352"> (11) 94174-3352</a> (José de Carvalho)
+            WhatsApp:
+            <a href="https://wa.me/5515997174741" target="_blank" rel="noopener noreferrer"> (15) 99717-4741</a> (Giancarlo) |
+            <a href="https://wa.me/5511941743352" target="_blank" rel="noopener noreferrer"> (11) 94174-3352</a> (José de Carvalho)
           </p>
         </div>
       </div>
