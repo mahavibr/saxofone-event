@@ -349,6 +349,22 @@ Barítono: Bruno Khaleb`,
         </div>
       </section>
 
+      <section className="instrument-section" id="instrument">
+        <div className="container">
+          <h2>Leve seu Instrumento</h2>
+          <div className="instrument-content">
+            <div className="instrument-icon">🎷</div>
+            <p>
+              Será um dia incrível de acesso a profissionais, professores e de muita troca.
+            </p>
+            <p>
+              Ao longo do dia queremos fazer um <strong>"ensaio com hinos"</strong>.
+            </p>
+            <p className="instrument-highlight">Está liberado levar instrumento. Aproveite!</p>
+          </div>
+        </div>
+      </section>
+
       <section className="alt">
         <div className="container">
           <h2>Benefícios de Participar</h2>

@@ -1568,3 +1568,50 @@ section.brands-section {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
+
+/* Instrument Section */
+section.instrument-section {
+  background: linear-gradient(180deg, #FFFDF6 0%, #FFFFFF 100%);
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.instrument-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+
+  p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.2rem;
+    line-height: 1.9;
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
+  }
+
+  strong {
+    color: var(--text-h);
+  }
+}
+
+.instrument-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.instrument-content p.instrument-highlight {
+  display: inline-block;
+  margin: 1rem 0 0;
+  padding: 0.9rem 1.8rem;
+  border: 2px solid var(--accent-gold);
+  border-radius: 999px;
+  color: var(--accent-bronze);
+  font-weight: 600;
+
+  @media (max-width: 480px) {
+    padding: 0.8rem 1.2rem;
+  }
+}
