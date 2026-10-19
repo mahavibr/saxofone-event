@@ -8,6 +8,8 @@ import barkleyLogo from './assets/brands/barkley-logo.png'
 import barkleyImage from './assets/brands/barkley-boquilhas.jpg'
 import intermezzoLogo from './assets/brands/intermezzo-logo.png'
 import intermezzoImage from './assets/brands/intermezzo-loja.jpg'
+import legereLogo from './assets/brands/legere-logo.png'
+import legereImage from './assets/brands/legere-palhetas.jpg'
 import pontoMusicalLogo from './assets/brands/ponto-musical-logo.png'
 import pontoMusicalImage from './assets/brands/ponto-musical-sax.jpg'
 import tokaiLogo from './assets/brands/tokai-logo.png'
@@ -23,13 +25,13 @@ const SPONSOR_TIERS = [
 
 const BRANDS = [
   {
-    name: 'Barkley',
-    tagline: 'Boquilhas finalizadas à mão',
-    desc: 'Fundada em 2003 em São Paulo por Junior Barkley, cria boquilhas para saxofone e clarinete que unem materiais de alta tecnologia ao acabamento artesanal, peça por peça.',
-    logo: barkleyLogo,
-    image: barkleyImage,
-    imagePosition: 'center',
-    url: 'https://barkley.com.br/'
+    name: 'Tokai',
+    tagline: 'Tradição em instrumentos musicais',
+    desc: 'Há mais de quatro décadas no mercado brasileiro, conhecida por órgãos e pianos digitais, oferece uma linha completa de saxofones, madeiras e metais para estudantes e profissionais.',
+    logo: tokaiLogo,
+    image: tokaiImage,
+    imagePosition: 'right center',
+    url: 'https://tokai.com.br/'
   },
   {
     name: 'Intermezzo',
@@ -41,6 +43,24 @@ const BRANDS = [
     url: 'https://www.intermezzo.com.br/'
   },
   {
+    name: 'Barkley',
+    tagline: 'Boquilhas finalizadas à mão',
+    desc: 'Fundada em 2003 em São Paulo por Junior Barkley, cria boquilhas para saxofone e clarinete que unem materiais de alta tecnologia ao acabamento artesanal, peça por peça.',
+    logo: barkleyLogo,
+    image: barkleyImage,
+    imagePosition: 'center',
+    url: 'https://barkley.com.br/'
+  },
+  {
+    name: 'Légère',
+    tagline: 'Palhetas sintéticas de alta performance',
+    desc: 'Fabricante canadense pioneira em palhetas sintéticas para saxofone e clarinete, com som e resposta próximos aos da cana natural e durabilidade e consistência muito superiores.',
+    logo: legereLogo,
+    image: legereImage,
+    imagePosition: 'center 60%',
+    url: 'https://www.legere.com/'
+  },
+  {
     name: 'Ponto Musical',
     tagline: 'Especialista em instrumentos de sopro',
     desc: 'Loja paulistana com mais de 10 anos dedicados aos sopros: saxofones, clarinetes, flautas e metais, além de boquilhas, palhetas e acessórios, com envio para todo o Brasil.',
@@ -48,15 +68,6 @@ const BRANDS = [
     image: pontoMusicalImage,
     imagePosition: 'center',
     url: 'https://www.pontomusical.com.br/'
-  },
-  {
-    name: 'Tokai',
-    tagline: 'Tradição em instrumentos musicais',
-    desc: 'Há mais de quatro décadas no mercado brasileiro, conhecida por órgãos e pianos digitais, oferece uma linha completa de saxofones, madeiras e metais para estudantes e profissionais.',
-    logo: tokaiLogo,
-    image: tokaiImage,
-    imagePosition: 'right center',
-    url: 'https://tokai.com.br/'
   }
 ]
 
