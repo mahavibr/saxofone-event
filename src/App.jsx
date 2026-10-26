@@ -10,8 +10,8 @@ import barkleyLogo from './assets/brands/barkley-logo.png'
 import barkleyImage from './assets/brands/barkley-boquilhas.jpg'
 import intermezzoLogo from './assets/brands/intermezzo-logo.png'
 import intermezzoImage from './assets/brands/intermezzo-loja.jpg'
-import legereLogo from './assets/brands/legere-logo.png'
-import legereImage from './assets/brands/legere-palhetas.jpg'
+import lamusicaLogo from './assets/brands/lamusica-logo.png'
+import lamusicaImage from './assets/brands/lamusica-marcas.jpeg'
 import pontoMusicalLogo from './assets/brands/ponto-musical-logo.png'
 import pontoMusicalImage from './assets/brands/ponto-musical-sax.jpg'
 import tokaiLogo from './assets/brands/tokai-logo.png'
@@ -54,13 +54,13 @@ const BRANDS = [
     url: 'https://barkley.com.br/'
   },
   {
-    name: 'Légère',
-    tagline: 'Palhetas sintéticas de alta performance',
-    desc: 'Fabricante canadense pioneira em palhetas sintéticas para saxofone e clarinete, com som e resposta próximos aos da cana natural e durabilidade e consistência muito superiores.',
-    logo: legereLogo,
-    image: legereImage,
-    imagePosition: 'center 60%',
-    url: 'https://www.legere.com/'
+    name: 'La Musica',
+    tagline: 'Importadora e distribuidora para instrumentos de sopro',
+    desc: 'Importadora brasileira sediada em Itatiba (SP) que traz ao país marcas de referência em palhetas e acessórios para sopros, como Légère, Gonzalez, BG France, Bambú, Rovner e J. Meinlschmidt, levando qualidade e informação a músicos de todo o Brasil.',
+    logo: lamusicaLogo,
+    image: lamusicaImage,
+    imagePosition: 'center',
+    url: 'https://lamusica.com.br/'
   },
   {
     name: 'Ponto Musical',
