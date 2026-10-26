@@ -593,6 +593,18 @@ section h2 {
     object-fit: cover;
   }
 
+  .artist-photo-duo {
+    display: flex;
+    gap: 2px;
+  }
+
+  .artist-photo-duo img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
   h3 {
     color: var(--text-h);
     margin: 1.5rem 1.5rem 0.5rem;
@@ -1060,6 +1072,38 @@ section h2 {
 
   p {
     white-space: pre-line;
+  }
+}
+
+.modal-person {
+  text-align: left;
+  margin-bottom: 1.8rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal-person-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+    border: 2px solid var(--accent-gold);
+  }
+
+  h4 {
+    color: var(--text-h);
+    font-size: 1.1rem;
+    margin: 0;
   }
 }
 

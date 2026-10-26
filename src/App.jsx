@@ -4,6 +4,8 @@ import giancarloPhoto from './assets/gian.jpg'
 import amarildoPhoto from './assets/amarildo.jpeg'
 import ciasaxPhoto from './assets/grupociasaxatual.jpeg'
 import josePhoto from './assets/jose.jpeg'
+import deisePhoto from './assets/fisioterapeutas/Deise.jpeg'
+import filipePhoto from './assets/fisioterapeutas/Filipe.jpeg'
 import barkleyLogo from './assets/brands/barkley-logo.png'
 import barkleyImage from './assets/brands/barkley-boquilhas.jpg'
 import intermezzoLogo from './assets/brands/intermezzo-logo.png'
@@ -159,6 +161,27 @@ Sua atuação se destaca pela integração entre excelência artística, prátic
       photo: amarildoPhoto
     },
     {
+      name: 'Fisioterapia para Músicos',
+      role: 'Com Deise Barroso e Filipe Tavares',
+      bio: 'Saúde, prevenção de lesões e cuidado com o corpo do instrumentista para uma prática musical duradoura.',
+      people: [
+        {
+          name: 'Deise Barroso Minhoto',
+          photo: deisePhoto,
+          bio: `Deise Barroso Minhoto é Terapeuta Ocupacional, formada pela Faculdade de Medicina da Universidade de São Paulo. Pós-graduada em Terapia da Mão e Membros Superiores, possui mais de 48 anos de experiência na atuação em clínica neuro-ortopédica. Atualmente ocupa o cargo de curadora em projeto social de atendimento a músicos de orquestras.
+
+Durante 15 anos ocupou o cargo de supervisora no Centro de Reabilitação da Santa Casa de Misericórdia de São Paulo. É diretora técnica da Clínica Due – Reabilitação Neuro-ortopédica e membro da Equipe de Cirurgia da Mão do Hospital Albert Einstein (SP), chefiada pelo Dr. José Luiz Pistelli.`
+        },
+        {
+          name: 'Filipe Tavares de Lima',
+          photo: filipePhoto,
+          bio: `Filipe Tavares de Lima é Fisioterapeuta (CREFITO-3/289134-F). Atua com fisioterapia esportiva desde 2019, com foco em ortopedia, reabilitação e prevenção de lesões. Faz parte da equipe da clínica esportiva Sports Clinic e atua em projeto social com músicos de orquestras desde abril de 2026.
+
+Possui especialização em Reabilitação Funcional das Disfunções Musculoesqueléticas e pós-graduação em Fisioterapia do Esporte e Atividade Física. Entre seus cursos estão Pilates, Dry Needling, Quiropraxia Clínica, Avaliação Multidimensional da Dor, Cinesiologia Funcional e Recovery Esportivo.`
+        }
+      ]
+    },
+    {
       name: 'Concerto Especial',
       role: 'CiaSax',
       bio: 'Apresentação musical especial em celebração aos 10 anos do Grupo SAX CCB-ERUDITO-SACRO.',
@@ -184,17 +207,18 @@ Barítono: Bruno Khaleb`,
   ]
 
   const schedule = [
-    { time: '08:00 às 09:00', event: 'Credenciamento & Café de Boas Vindas', description: '' },
-    { time: '09:00 às 09:30', event: 'Cerimônia de Abertura - Uma Década', description: '' },
-    { time: '09:30 às 10:30', event: 'O Saxofone que Venceu o Tempo', description: 'Com Giancarlo Medeiros' },
-    { time: '10:30 às 11:30', event: 'Como ser uma Referência Sonora', description: 'Com Amarildo Nascimento' },
-    { time: '11:30 às 12:30', event: 'Seu Saxofone está trabalhando a seu favor?', description: 'Com Caio Henrique' },
-    { time: '12:30 às 14:00', event: 'Pausa para Almoço e Convivência', description: '' },
-    { time: '14:00 às 14:50', event: 'Concerto Especial - CiaSax', description: '' },
-    { time: '14:50 às 15:10', event: 'Espaço Parceiros Oficiais', description: '' },
-    { time: '15:10 às 16:10', event: 'A Arte de Tocar Junto', description: 'Com Giancarlo Medeiros e José de Carvalho' },
-    { time: '16:10 às 16:30', event: 'Espaço Sax Experience com os Expositores', description: '' },
-    { time: '16:30 às 17:00', event: 'O Grande Encerramento e Reconhecimentos', description: '' }
+    { time: '08:00 às 08:45', event: 'Credenciamento & Café de Boas-Vindas', description: '' },
+    { time: '08:45 às 09:00', event: 'Cerimônia de Abertura - Uma Década', description: '' },
+    { time: '09:00 às 10:00', event: 'O Saxofone que Venceu o Tempo', description: 'Com Giancarlo Medeiros' },
+    { time: '10:00 às 11:00', event: 'Como ser uma Referência Sonora', description: 'Com Amarildo Nascimento' },
+    { time: '11:00 às 11:30', event: 'Seu Saxofone trabalha a seu favor?', description: 'Com Caio Henrique' },
+    { time: '11:30 às 12:30', event: 'Fisioterapia para Músicos', description: 'Com Deise Barroso e Filipe Tavares' },
+    { time: '12:30 às 13:30', event: 'Almoço e Convivência', description: '' },
+    { time: '13:30 às 14:20', event: 'Concerto Especial - CiaSax', description: '' },
+    { time: '14:20 às 14:40', event: 'Espaço Parceiros Oficiais', description: '' },
+    { time: '14:40 às 16:10', event: 'A Arte de Tocar Junto', description: 'Com Giancarlo e José de Carvalho' },
+    { time: '16:10 às 16:30', event: 'Sax Experience com os Expositores', description: '' },
+    { time: '16:30 às 17:00', event: 'Encerramento e Reconhecimentos', description: '' }
   ]
 
   const benefits = [
@@ -265,9 +289,17 @@ Barítono: Bruno Khaleb`,
           <div className="artists-grid">
             {presentations.map((presentation, idx) => (
               <div key={idx} className="artist-card">
-                <div className="artist-photo">
-                  <img src={presentation.photo} alt={presentation.name} style={{ objectPosition: presentation.photoPosition }} />
-                </div>
+                {presentation.people ? (
+                  <div className="artist-photo artist-photo-duo">
+                    {presentation.people.map((person) => (
+                      <img key={person.name} src={person.photo} alt={person.name} />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="artist-photo">
+                    <img src={presentation.photo} alt={presentation.name} style={{ objectPosition: presentation.photoPosition }} />
+                  </div>
+                )}
                 <h3>{presentation.name}</h3>
                 <p className="artist-role">{presentation.role}</p>
                 <p>{presentation.bio}</p>
@@ -294,7 +326,19 @@ Barítono: Bruno Khaleb`,
               ×
             </button>
             <h3>{selectedPresenter.role.replace(/^Com\s+/, '') || selectedPresenter.name}</h3>
-            <p>{selectedPresenter.fullBio}</p>
+            {selectedPresenter.people ? (
+              selectedPresenter.people.map((person) => (
+                <div key={person.name} className="modal-person">
+                  <div className="modal-person-header">
+                    <img src={person.photo} alt={person.name} />
+                    <h4>{person.name}</h4>
+                  </div>
+                  <p>{person.bio}</p>
+                </div>
+              ))
+            ) : (
+              <p>{selectedPresenter.fullBio}</p>
+            )}
           </div>
         </div>
       )}
