@@ -1659,3 +1659,43 @@ section.instrument-section {
     padding: 0.8rem 1.2rem;
   }
 }
+
+.instrument-info {
+  margin: 2.5rem auto 0;
+  max-width: 620px;
+  text-align: left;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+
+  @media (max-width: 480px) {
+    padding: 1.4rem 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    color: var(--text-h);
+    margin: 0 0 1rem;
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 1.4rem;
+
+    li {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin-bottom: 0.8rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

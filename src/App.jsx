@@ -4,6 +4,7 @@ import giancarloPhoto from './assets/gian.jpg'
 import amarildoPhoto from './assets/amarildo.jpeg'
 import ciasaxPhoto from './assets/grupociasaxatual.jpeg'
 import josePhoto from './assets/jose.jpeg'
+import caioPhoto from './assets/caio.jpeg'
 import deisePhoto from './assets/fisioterapeutas/Deise.jpeg'
 import filipePhoto from './assets/fisioterapeutas/Filipe.jpeg'
 import barkleyLogo from './assets/brands/barkley-logo.png'
@@ -203,6 +204,16 @@ Barítono: Bruno Khaleb`,
       bio: 'Afinação Coletiva, Equilíbrio sonoro e escuta ativa. Realizando aplicação prática nos hinos com Giancarlo Medeiros.',
       fullBio: `Natural de Matias Olímpio - Piauí, José de Carvalho é doutor em Música pela Universidade Federal do Estado do Rio de Janeiro - UNIRIO na área de Teoria e Prática da Interpretação Musical e mestre pela Universidade de São Paulo - USP, na área de Teoria e Análise Musical, ambas as pesquisas financiadas pela CAPES. Atualmente, desenvolve pesquisa de pós-doutorado na USP sobre o tema, ''Do Índio Feio ao Capadócio'': Interações onomatopaicas entre primitivismo e o moderno na representação do saxofone em Villa-Lobos. Possui experiência no ensino superior e na gestão acadêmica, tendo atuado como professor e coordenador no Centro Universitário Sant'Anna e como editor assistente da Revista Música (ECA/USP). É professor concursado de saxofone no Conservatório de Cubatão e Maestro Assistente da Banda Municipal de Embu das Artes. Como instrumentista, integra a Banda Filarmônica de São Paulo, o Grupo AUM e o Duo Villaniando. Sua trajetória artística inclui premiação em concurso de música de câmara, colaborações com orquestras e bandas sinfônicas, além de apresentações internacionais e publicações nas áreas de Teoria e Prática da Interpretação, Educação Musical e Análise Musical.`,
       photo: josePhoto
+    },
+    {
+      name: 'Seu Saxofone trabalha a seu favor?',
+      role: 'Com Caio Henrique',
+      bio: 'Ajustes, soldas e sapatilhamento: o cuidado artesanal que mantém cada saxofone em perfeitas condições.',
+      fullBio: `O Luthier Caio Henrique especializou-se em manutenção de saxofones (ajustes, soldas, sapatilhamento, etc.) no ano de 2020, com o renomado Luthier Daniel Tamborim, e vem executando serviços com qualidade desde então, utilizando materiais de altíssima qualidade, nacionais e importados.
+
+Cursou saxofone no Conservatório de Tatuí, e sua missão a cada saxofone é deixá-lo em perfeitas condições, como se estivesse fazendo para si mesmo.`,
+      photo: caioPhoto,
+      photoPosition: 'center top'
     }
   ]
 
@@ -395,7 +406,7 @@ Barítono: Bruno Khaleb`,
 
       <section className="instrument-section" id="instrument">
         <div className="container">
-          <h2>Leve seu Instrumento</h2>
+          <h2>Leve seu Saxofone</h2>
           <div className="instrument-content">
             <div className="instrument-icon">🎷</div>
             <p>
@@ -405,6 +416,14 @@ Barítono: Bruno Khaleb`,
               Ao longo do dia queremos fazer um <strong>"ensaio com hinos"</strong>.
             </p>
             <p className="instrument-highlight">Está liberado levar instrumento. Aproveite!</p>
+            <div className="instrument-info">
+              <h3>Informações importantes:</h3>
+              <ol>
+                <li>O evento é destinado à família saxofone, portanto, está liberado levar o instrumento para melhor prática.</li>
+                <li>Haverá local para armazenamento e guarda dos instrumentos.</li>
+                <li>Tocaremos hino ao final do evento.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </section>
