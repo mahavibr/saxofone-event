@@ -86,7 +86,7 @@ function App() {
   const faqItems = [
     {
       question: 'Qual é a data e local do evento?',
-      answer: 'A Comemoração de 10 anos do Grupo SAX CCB-ERUDITO-SACRO ocorre na Faculdade Uni Santana, localizada na Rua Voluntários da Pátria, 257 - Próximo ao Metrô Tietê (Linha Azul). O evento acontece no sábado, 21 de novembro de 2026, a partir das 08:00. A programação completa está disponível na seção de cronograma.'
+      answer: 'A Comemoração de 10 anos do Grupo Sax Erudito Sacro ocorre na Faculdade Uni Santana, localizada na Rua Voluntários da Pátria, 257 - Próximo ao Metrô Tietê (Linha Azul). O evento acontece no sábado, 21 de novembro de 2026, a partir das 08:00. A programação completa está disponível na seção de cronograma.'
     },
     {
       question: 'Quantos ingressos posso comprar?',
@@ -185,7 +185,7 @@ Possui especialização em Reabilitação Funcional das Disfunções Musculoesqu
     {
       name: 'Concerto Especial',
       role: 'CiaSax',
-      bio: 'Apresentação musical especial em celebração aos 10 anos do Grupo SAX CCB-ERUDITO-SACRO.',
+      bio: 'Apresentação musical especial em celebração aos 10 anos do Grupo Sax Erudito Sacro.',
       fullBio: `O Cia.Sax atua desde o ano de 2017 em diversos festivais e masterclasses, diversificando a música erudita para quarteto de saxofones para todos aqueles que querem ouvir novas sonoridades.
 
 O grupo participou de masterclasses com renomados saxofonistas, de grandes festivais, como Gramado in Concert, 2º Festival de Verão de Campos do Jordão, do Núcleo de Desenvolvimento de Carreira, da EMESP Tom Jobim, e no ano de 2023 foi vencedor do Concurso Jovens Solistas da Banda Sinfônica Jovem do Estado de São Paulo.
@@ -266,7 +266,7 @@ Cursou saxofone no Conservatório de Tatuí, e sua missão a cada saxofone é de
 
       <section className="hero">
         <div className="hero-content">
-          <h1>Comemoração de 10 anos do Grupo: SAX CCB-ERUDITO-SACRO</h1>
+          <h1>Comemoração de 10 anos do Grupo: Sax Erudito Sacro</h1>
           <p className="hero-subtitle">Um dia inteiro celebrando a excelência do saxofone erudito</p>
           <p className="hero-date">Sábado, 21 de novembro de 2026</p>
         </div>
@@ -277,7 +277,7 @@ Cursou saxofone no Conservatório de Tatuí, e sua missão a cada saxofone é de
           <h2>Sobre o Evento</h2>
           <div className="about-content">
             <p>
-              A Comemoração de 10 anos do Grupo SAX CCB-ERUDITO-SACRO é um evento dedicado à celebração e difusão do saxofone
+              A Comemoração de 10 anos do Grupo Sax Erudito Sacro é um evento dedicado à celebração e difusão do saxofone
               em sua forma mais clássica e refinada. Reunindo saxofonistas talentosos de todo o Brasil, criamos um espaço
               onde a excelência musical encontra a sofisticação.
             </p>
@@ -628,7 +628,7 @@ function Footer({ faqItems, expandedFaq, toggleFaq }) {
         </section>
 
         <div className="footer-bottom">
-          <p>&copy; 2026 Grupo SAX CCB-ERUDITO-SACRO. Todos os direitos reservados.</p>
+          <p>&copy; 2026 Grupo Sax Erudito Sacro. Todos os direitos reservados.</p>
           <p>
             WhatsApp:
             <a href="https://wa.me/5515997174741" target="_blank" rel="noopener noreferrer"> (15) 99717-4741</a> (Giancarlo) |

@@ -10,7 +10,7 @@ function Fotos() {
         <div className="container">
           <h1>Fotos e Vídeos do Evento</h1>
           <p className="photos-subtitle">
-            Comemoração de 10 anos do Grupo SAX CCB-ERUDITO-SACRO · 21 de novembro de 2026
+            Comemoração de 10 anos do Grupo Sax Erudito Sacro · 21 de novembro de 2026
           </p>
 
           <div className="photos-notice">
@@ -29,7 +29,7 @@ function Fotos() {
       <footer>
         <div className="footer-content">
           <div className="footer-bottom">
-            <p>&copy; 2026 Grupo SAX CCB-ERUDITO-SACRO. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Grupo Sax Erudito Sacro. Todos os direitos reservados.</p>
             <p>
               WhatsApp:
               <a href="https://wa.me/5515997174741" target="_blank" rel="noopener noreferrer"> (15) 99717-4741</a> (Giancarlo) |
