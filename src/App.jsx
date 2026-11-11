@@ -201,7 +201,7 @@ Barítono: Bruno Khaleb`,
     {
       name: 'A Arte de Tocar Junto',
       role: 'Com José de Carvalho',
-      bio: 'Afinação Coletiva, Equilíbrio sonoro e escuta ativa. Realizando aplicação prática nos hinos com Giancarlo Medeiros.',
+      bio: 'Afinação Coletiva, Equilíbrio sonoro e escuta ativa. Realizando aplicação prática de conjunto com Giancarlo Medeiros.',
       fullBio: `Natural de Matias Olímpio - Piauí, José de Carvalho é doutor em Música pela Universidade Federal do Estado do Rio de Janeiro - UNIRIO na área de Teoria e Prática da Interpretação Musical e mestre pela Universidade de São Paulo - USP, na área de Teoria e Análise Musical, ambas as pesquisas financiadas pela CAPES. Atualmente, desenvolve pesquisa de pós-doutorado na USP sobre o tema, ''Do Índio Feio ao Capadócio'': Interações onomatopaicas entre primitivismo e o moderno na representação do saxofone em Villa-Lobos. Possui experiência no ensino superior e na gestão acadêmica, tendo atuado como professor e coordenador no Centro Universitário Sant'Anna e como editor assistente da Revista Música (ECA/USP). É professor concursado de saxofone no Conservatório de Cubatão e Maestro Assistente da Banda Municipal de Embu das Artes. Como instrumentista, integra a Banda Filarmônica de São Paulo, o Grupo AUM e o Duo Villaniando. Sua trajetória artística inclui premiação em concurso de música de câmara, colaborações com orquestras e bandas sinfônicas, além de apresentações internacionais e publicações nas áreas de Teoria e Prática da Interpretação, Educação Musical e Análise Musical.`,
       photo: josePhoto
     },
@@ -413,7 +413,7 @@ Cursou saxofone no Conservatório de Tatuí, e sua missão a cada saxofone é de
               Será um dia incrível de acesso a profissionais, professores e de muita troca.
             </p>
             <p>
-              Ao longo do dia queremos fazer um <strong>"ensaio com hinos"</strong>.
+              Ao longo do dia queremos fazer uma <strong>prática de conjunto</strong>.
             </p>
             <p className="instrument-highlight">Está liberado levar instrumento. Aproveite!</p>
             <div className="instrument-info">
@@ -421,7 +421,7 @@ Cursou saxofone no Conservatório de Tatuí, e sua missão a cada saxofone é de
               <ol>
                 <li>O evento é destinado à família saxofone, portanto, está liberado levar o instrumento para melhor prática.</li>
                 <li>Haverá local para armazenamento e guarda dos instrumentos.</li>
-                <li>Tocaremos hino ao final do evento.</li>
+                <li>Haverá prática de conjunto ao final do evento.</li>
               </ol>
             </div>
           </div>
