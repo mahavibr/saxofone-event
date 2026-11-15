@@ -491,7 +491,7 @@ Cursou saxofone no Conservatório de Tatuí, e sua missão a cada saxofone é de
           <div className="ticket-container">
             <div className="ticket-info">
               <h3>Acesso Completo ao Encontro</h3>
-              <div className="ticket-price">R$ 125,00</div>
+              <div className="ticket-price">R$ 150,00</div>
               <ul>
                 <li>Acesso a todas as apresentações do dia</li>
                 <li>Café da Manhã incluso</li>
