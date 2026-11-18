@@ -107,6 +107,10 @@ function App() {
     {
       question: 'Como faço para receber o ingresso eletrônico?',
       answer: 'Após a compra, você receberá um e-mail de confirmação com o seu QR code de acesso. Apresente-o na entrada do auditório no dia do evento.'
+    },
+    {
+      question: 'Qual é a política de reembolso?',
+      answer: 'Em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/90, art. 49), você pode solicitar o reembolso integral do ingresso em até 7 (sete) dias corridos a partir da data da compra. Para solicitar, entre em contato pelo WhatsApp com os organizadores: (15) 99717-4741 (Giancarlo) ou (11) 94174-3352 (José de Carvalho). Caso o evento já tenha ocorrido, não haverá reembolso, uma vez que os custos de realização do evento já terão sido incorridos.'
     }
   ]
 
