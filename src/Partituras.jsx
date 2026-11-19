@@ -31,13 +31,13 @@ const pecas = [
   {
     id: 'ao-entardecer',
     titulo: 'Ao Entardecer',
-    subtitulo: 'Hino "Eventide" (Comigo Habita) · 7 naipes',
+    subtitulo: 'Hino "Eventide" (Comigo Habita) · 7 vozes',
     grade: { pdf: aeGrade, nome: 'Ao Entardecer - Grade.pdf' },
     naipes: [
       { nome: 'Soprano', img: imgSoprano, pdf: aeSoprano, download: 'Ao Entardecer - Sax Soprano.pdf' },
-      { nome: 'Alto 1', img: imgAlto, pdf: aeAlto1, download: 'Ao Entardecer - Sax Alto 1.pdf' },
-      { nome: 'Alto 2', img: imgAlto, pdf: aeAlto2, download: 'Ao Entardecer - Sax Alto 2.pdf' },
-      { nome: 'Alto 3', img: imgAlto, pdf: aeAlto3, download: 'Ao Entardecer - Sax Alto 3.pdf' },
+      { nome: 'Alto - Voz 1', img: imgAlto, pdf: aeAlto1, download: 'Ao Entardecer - Sax Alto 1.pdf' },
+      { nome: 'Alto - Voz 2', img: imgAlto, pdf: aeAlto2, download: 'Ao Entardecer - Sax Alto 2.pdf' },
+      { nome: 'Alto - Voz 3', img: imgAlto, pdf: aeAlto3, download: 'Ao Entardecer - Sax Alto 3.pdf' },
       { nome: 'Tenor', img: imgTenor, pdf: aeTenor, download: 'Ao Entardecer - Sax Tenor.pdf' },
       { nome: 'Barítono', img: imgBaritono, pdf: aeBaritono, download: 'Ao Entardecer - Sax Barítono.pdf' },
       { nome: 'Baixo', img: imgBaixo, pdf: aeBaixo, download: 'Ao Entardecer - Sax Baixo.pdf' },
@@ -46,7 +46,7 @@ const pecas = [
   {
     id: 'coral-bach',
     titulo: 'Coral Bach',
-    subtitulo: 'Coral de J. S. Bach · 5 naipes',
+    subtitulo: 'Coral de J. S. Bach · 5 vozes',
     grade: { pdf: cbGrade, nome: 'Coral Bach 1 - Grade.pdf' },
     naipes: [
       { nome: 'Soprano', img: imgSoprano, pdf: cbSoprano, download: 'Coral Bach 1 - Sax Soprano.pdf' },
@@ -84,7 +84,7 @@ function Partituras() {
                   <span className="peca-card-icon">🎼</span>
                   <h2>{p.titulo}</h2>
                   <p>{p.subtitulo}</p>
-                  <span className="peca-card-cta">Ver naipes →</span>
+                  <span className="peca-card-cta">Ver vozes →</span>
                 </button>
               ))}
             </div>
@@ -108,7 +108,7 @@ function Partituras() {
                 </a>
               </div>
 
-              <p className="naipes-hint">Clique no naipe para baixar o PDF.</p>
+              <p className="naipes-hint">Clique na voz para baixar o PDF.</p>
 
               <div className="naipes-grid">
                 {peca.naipes.map((n) => (
