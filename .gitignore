@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Vercel
+.vercel
+
+# Arquivos locais de trabalho (não versionar)
+.agents/
+disparozap/
+ref/
+skills-lock.json
+src/assets/VideosRedes/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +32,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.env*
