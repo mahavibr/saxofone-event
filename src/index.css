@@ -1860,12 +1860,14 @@ section.instrument-section {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 8px;
+  background: var(--bg-light);
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    padding: 6px;
   }
 }
 
