@@ -70,7 +70,7 @@ function Partituras() {
         <div className="container">
           <h1>Partituras</h1>
           <p className="partituras-subtitle">
-            Escolha uma peça e baixe a partitura do seu naipe.
+            Escolha uma peça e baixe a partitura da sua voz.
           </p>
 
           {!peca && (
