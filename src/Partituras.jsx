@@ -56,7 +56,7 @@ const pecas = [
   {
     id: 'a-deus-nosso-salvador',
     titulo: 'A Deus Nosso Salvador',
-    subtitulo: 'Hino de louvor · 7 vozes',
+    subtitulo: 'Composição para 7 vozes',
     naipes: [
       { nome: 'Soprano', img: imgSoprano, pdf: adnsSoprano, download: 'A Deus Nosso Salvador - Sax Soprano.pdf' },
       { nome: 'Alto - Voz 1', img: imgAlto, pdf: adnsAlto1, download: 'A Deus Nosso Salvador - Sax Alto 1.pdf' },
