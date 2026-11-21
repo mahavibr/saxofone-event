@@ -230,8 +230,9 @@ Cursou saxofone no Conservatório de Tatuí, e sua missão a cada saxofone é de
     { time: '11:30 às 12:30', event: 'Fisioterapia para Músicos', description: 'Com Deise Barroso e Filipe Tavares' },
     { time: '12:30 às 13:30', event: 'Almoço e Convivência', description: '' },
     { time: '13:30 às 14:20', event: 'Concerto Especial - CiaSax', description: '' },
-    { time: '14:20 às 16:30', event: 'A Arte de Tocar Junto', description: 'Com Giancarlo e José de Carvalho' },
-    { time: '16:30 às 17:00', event: 'Encerramento e Reconhecimentos', description: '' }
+    { time: '14:20 às 14:45', event: 'Conhecer Expositores', description: '' },
+    { time: '14:45 às 16:45', event: 'A Arte de Tocar Junto', description: 'Com Giancarlo e José de Carvalho' },
+    { time: '16:45 às 17:00', event: 'Encerramento e Reconhecimentos', description: '' }
   ]
 
   const benefits = [
