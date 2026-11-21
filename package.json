@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fotos": "bash scripts/gerar-fotos.sh"
   },
   "dependencies": {
+    "fflate": "^0.8.3",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },

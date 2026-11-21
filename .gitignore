@@ -33,3 +33,6 @@ src/assets/VideosRedes/
 *.sln
 *.sw?
 .env*
+
+# Originais das fotos (pesados) - só as versões otimizadas em public/fotos sobem
+src/assets/fotosevento/
