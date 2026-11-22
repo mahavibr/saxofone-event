@@ -11,6 +11,7 @@
     "fotos": "bash scripts/gerar-fotos.sh"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.2.1",
     "fflate": "^0.8.3",
     "qrcode.react": "^4.2.0",
     "react": "^19.2.6",
