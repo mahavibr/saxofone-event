@@ -79,7 +79,9 @@ export const ETAPAS = [
     descricao: 'Fique à vontade — tudo é opcional. Não informe nome ou contato.',
     perguntas: [
       { id: 'txt_gostou', tipo: 'texto', rotulo: 'O que você mais gostou?', obrigatoria: false },
+      { id: 'txt_faltou_100', tipo: 'texto', rotulo: 'O que faltou para ser 100%?', obrigatoria: false },
       { id: 'txt_melhorar', tipo: 'texto', rotulo: 'O que poderíamos melhorar?', obrigatoria: false },
+      { id: 'txt_datas', tipo: 'texto', rotulo: 'Quais datas você aconselharia para o próximo evento?', obrigatoria: false },
       { id: 'txt_sugestoes', tipo: 'texto', rotulo: 'Sugestões de temas, convidados ou atividades para a próxima edição', obrigatoria: false },
     ],
   },
