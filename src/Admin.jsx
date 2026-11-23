@@ -73,39 +73,74 @@ function ListaRanking({ titulo, itens, total, filtro, onFiltro }) {
   )
 }
 
-function TextosPergunta({ p, onExcluir }) {
+function RespostasEscritas({ textos, onExcluir }) {
+  const [aba, setAba] = useState(0)
+  const [pos, setPos] = useState(0)
   const [filtro, setFiltro] = useState(null)
-  const r = useMemo(() => ranking(p.itens), [p.itens])
+  const p = textos[aba]
+  const r = useMemo(() => ranking(p.itens, { max: 6 }), [p.itens])
   const visiveis = filtro ? p.itens.filter((t) => filtro.ids.has(t.id)) : p.itens
+  const atual = Math.min(pos, Math.max(visiveis.length - 1, 0))
+  const t = visiveis[atual]
   const temRanking = r.palavras.length > 0 || r.expressoes.length > 0
+
+  const ir = (n) => setPos(Math.min(Math.max(n, 0), visiveis.length - 1))
+  const trocarAba = (i) => { setAba(i); setPos(0); setFiltro(null) }
+  const aoTeclar = (e) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); ir(atual + 1) }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); ir(atual - 1) }
+  }
+
   return (
-    <div className="adm-textos">
-      <h3>{p.rotulo} <small>({p.itens.length})</small></h3>
-      {p.itens.length === 0 && <p className="form-desc">Sem respostas.</p>}
-      {temRanking && (
-        <div className="adm-ranking">
-          <p className="adm-ranking-nota">Termos mais citados · número de respostas que mencionam cada um · clique para filtrar</p>
-          <div className="adm-ranking-cols">
-            <ListaRanking titulo="Expressões" itens={r.expressoes} total={p.itens.length} filtro={filtro?.termo} onFiltro={setFiltro} />
-            <ListaRanking titulo="Palavras" itens={r.palavras} total={p.itens.length} filtro={filtro?.termo} onFiltro={setFiltro} />
+    <div className="adm-resp">
+      <div className="adm-abas" role="tablist">
+        {textos.map((q, i) => (
+          <button key={q.id} role="tab" aria-selected={i === aba} className={`adm-aba${i === aba ? ' ativa' : ''}`} onClick={() => trocarAba(i)}>
+            <span>{q.rotulo}</span><b>{q.itens.length}</b>
+          </button>
+        ))}
+      </div>
+
+      {p.itens.length === 0 ? (
+        <p className="form-desc adm-vazio">Ainda não há respostas para esta pergunta.</p>
+      ) : (
+        <div className="adm-visor" tabIndex={0} onKeyDown={aoTeclar}>
+          {filtro && (
+            <p className="adm-filtro">
+              Filtrando por “{filtro.termo}” · {visiveis.length} de {p.itens.length} respostas ·{' '}
+              <button className="adm-link" onClick={() => { setFiltro(null); setPos(0) }}>limpar filtro</button>
+            </p>
+          )}
+          <div className="adm-visor-nav">
+            <button className="gallery-btn" onClick={() => ir(atual - 1)} disabled={atual === 0} aria-label="Resposta anterior">‹ Anterior</button>
+            <span className="adm-visor-pos">Resposta <b>{atual + 1}</b> de {visiveis.length}</span>
+            <button className="gallery-btn gallery-btn-primary" onClick={() => ir(atual + 1)} disabled={atual >= visiveis.length - 1} aria-label="Próxima resposta">Próxima ›</button>
+          </div>
+          {t && (
+            <div className="adm-cartao">
+              <p className="adm-cartao-texto">{t.texto}</p>
+              <div className="adm-cartao-meta">
+                <span>#{t.id} · {data(t.criado_em)}</span>
+                <button className="adm-link adm-perigo" onClick={() => onExcluir(t.id)}>excluir resposta</button>
+              </div>
+            </div>
+          )}
+          <div className="adm-pontos" aria-hidden="true">
+            {visiveis.length <= 40 && visiveis.map((x, i) => (
+              <button key={x.id} className={i === atual ? 'ativo' : ''} onClick={() => ir(i)} tabIndex={-1} />
+            ))}
           </div>
         </div>
       )}
-      {filtro && (
-        <p className="adm-filtro">
-          Mostrando {visiveis.length} de {p.itens.length} respostas com “{filtro.termo}” ·{' '}
-          <button className="adm-link" onClick={() => setFiltro(null)}>mostrar todas</button>
-        </p>
+      {temRanking && (
+        <details className="adm-ranking">
+          <summary>Termos mais citados <small>· clique em um termo para ver só as respostas com ele</small></summary>
+          <div className="adm-ranking-cols">
+            <ListaRanking titulo="Expressões" itens={r.expressoes} total={p.itens.length} filtro={filtro?.termo} onFiltro={(x) => { setFiltro(x); setPos(0) }} />
+            <ListaRanking titulo="Palavras" itens={r.palavras} total={p.itens.length} filtro={filtro?.termo} onFiltro={(x) => { setFiltro(x); setPos(0) }} />
+          </div>
+        </details>
       )}
-      {visiveis.map((t) => (
-        <blockquote key={t.id}>
-          {t.texto}
-          <footer>
-            #{t.id} · {data(t.criado_em)}{' '}
-            <button className="adm-link" onClick={() => onExcluir(t.id)}>excluir resposta</button>
-          </footer>
-        </blockquote>
-      ))}
     </div>
   )
 }
@@ -256,9 +291,7 @@ export default function Admin() {
 
           <div className="form-card">
             <h2>Respostas escritas</h2>
-            {m.textos.map((p) => (
-              <TextosPergunta key={p.id} p={p} onExcluir={(id) => mudar('excluir', id)} />
-            ))}
+            <RespostasEscritas textos={m.textos} onExcluir={(id) => mudar('excluir', id)} />
           </div>
 
           <div className="form-card">

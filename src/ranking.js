@@ -14,7 +14,7 @@ houve há ha vai vou ia iria fazer faz fez pode poderia podia deve deveria seja 
 como quando onde qual quais quem porque pois porém porem mas ou também tambem então entao
 só so todo toda todos todas tudo nada algo algum alguma alguns algumas outro outra outros outras
 mesmo mesma cada tão tao tanto tanta assim ainda aqui ali lá la acho achei gostei gostaria
-coisa coisas vez vezes ate etc ok estava estavam ficou fica ficar precisa precisava faltou falta melhor
+coisa coisas vez vezes ate etc ok estava estavam foram ficou fica ficar precisa precisava faltou falta melhor
 `.split(/\s+/).filter(Boolean))
 
 const semAcento = (s) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '')

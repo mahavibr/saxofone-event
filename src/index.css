@@ -2040,10 +2040,9 @@ section.instrument-section {
 .adm-linha { display: grid; grid-template-columns: minmax(0, 1.4fr) 1fr 3rem; gap: 0.6rem; align-items: center; font-size: 0.85rem; margin: 0.4rem 0;
   b { text-align: right; } }
 .adm-barra { height: 10px; background: var(--border); border-radius: 99px; overflow: hidden; div { height: 100%; } }
-.adm-textos blockquote { margin: 0.5rem 0; padding: 0.6rem 1rem; background: #fff; border-left: 3px solid var(--accent-gold); border-radius: 6px; white-space: pre-wrap;
-  footer { font-size: 0.75rem; color: var(--text-light); margin-top: 0.3rem; } }
-.adm-ranking { margin: 0.6rem 0 1rem; padding: 0.9rem 1rem; background: var(--bg-light); border: 1px solid var(--border); border-radius: 10px; }
-.adm-ranking-nota { font-size: 0.78rem; color: var(--text-light); margin: 0 0 0.6rem; }
+.adm-ranking { margin: 1.4rem 0 0; padding: 0.9rem 1rem; background: var(--bg-light); border: 1px solid var(--border); border-radius: 10px; }
+.adm-ranking summary { cursor: pointer; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.5rem; }
+.adm-ranking summary small { font-weight: 400; color: var(--text-light); }
 .adm-ranking-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.4rem 1.5rem; }
 .adm-ranking-col h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--accent-bronze); margin: 0 0 0.3rem; }
 .adm-ranking-col ol { list-style: none; margin: 0; padding: 0; }
@@ -2052,6 +2051,26 @@ section.instrument-section {
 .adm-termo.ativo { background: #FFF8E6; outline: 1px solid var(--accent-gold); }
 .adm-termo-nome { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .adm-termo b { text-align: right; }
+.adm-abas { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+.adm-aba { flex: 0 0 auto; display: flex; align-items: center; gap: 0.5rem; max-width: 100%; padding: 0.5rem 0.9rem; background: #fff; border: 1px solid var(--border); border-radius: 999px; font: inherit; font-size: 0.85rem; color: var(--text); cursor: pointer; text-align: left; }
+.adm-aba span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.adm-aba b { flex: none; min-width: 1.6rem; padding: 0.05rem 0.4rem; border-radius: 999px; background: var(--bg-light); font-size: 0.75rem; text-align: center; }
+.adm-aba:hover { border-color: var(--accent-gold); }
+.adm-aba.ativa { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+.adm-aba.ativa b { background: rgba(255,255,255,0.25); color: #fff; }
+.adm-vazio { text-align: center; padding: 1.5rem 0; }
+.adm-visor { outline: none; }
+.adm-visor-nav { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; margin-bottom: 0.8rem; }
+.adm-visor-pos { font-size: 0.9rem; color: var(--text-light); }
+.adm-visor-pos b { color: var(--text-h); }
+.adm-visor-nav .gallery-btn:disabled { opacity: 0.4; cursor: default; }
+.adm-cartao { min-height: 150px; padding: 1.4rem 1.5rem 1rem; background: #FFFDF6; border: 1px solid var(--border); border-left: 4px solid var(--accent-gold); border-radius: 10px; display: flex; flex-direction: column; justify-content: space-between; gap: 1.2rem; }
+.adm-cartao-texto { margin: 0; font-size: 1.05rem; line-height: 1.7; color: var(--text-h); white-space: pre-wrap; overflow-wrap: anywhere; }
+.adm-cartao-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; font-size: 0.78rem; color: var(--text-light); }
+.adm-pontos { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 0.9rem; }
+.adm-pontos button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 50%; background: var(--border); cursor: pointer; }
+.adm-pontos button.ativo { background: var(--accent); transform: scale(1.3); }
+@media (max-width: 600px) { .adm-visor-nav .gallery-btn { padding: 0.5rem 0.8rem; } .adm-cartao { padding: 1rem; } }
 .adm-filtro { font-size: 0.85rem; color: var(--text-light); margin: 0.4rem 0; }
 .adm-tabela-wrap { overflow-x: auto; }
 .adm-tabela { width: 100%; border-collapse: collapse; font-size: 0.85rem; th, td { padding: 0.5rem; border-bottom: 1px solid var(--border); text-align: left; } }
