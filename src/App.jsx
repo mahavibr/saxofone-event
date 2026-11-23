@@ -575,8 +575,6 @@ export function Header() {
           <li><a href="/#brands" onClick={closeMenu}>Marcas</a></li>
           <li><a href="/#schedule" onClick={closeMenu}>Cronograma</a></li>
           <li><a href="/#ticket" onClick={closeMenu}>Ingresso</a></li>
-          <li><a href="/partituras" onClick={closeMenu}>Partituras</a></li>
-          <li><a href="/fotos" onClick={closeMenu}>Fotos</a></li>
         </nav>
         <button
           className={`menu-toggle${isMenuOpen ? ' menu-toggle-open' : ''}`}
