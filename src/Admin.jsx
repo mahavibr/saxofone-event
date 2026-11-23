@@ -2,6 +2,7 @@ import { useCallback, useMemo, useState } from 'react'
 import './App.css'
 import { Header } from './App.jsx'
 import { ETAPAS, TODAS_PERGUNTAS } from './formSchema.js'
+import { ranking } from './ranking.js'
 
 const CHAVE_SENHA = 'sax-admin-senha'
 const media = (ns) => (ns.length ? ns.reduce((a, b) => a + b, 0) / ns.length : null)
@@ -49,6 +50,63 @@ function calcular(ativas) {
 function Barra({ valor, max, cor }) {
   return (
     <div className="adm-barra"><div style={{ width: `${max ? (valor / max) * 100 : 0}%`, background: cor }} /></div>
+  )
+}
+
+function ListaRanking({ titulo, itens, total, filtro, onFiltro }) {
+  if (!itens.length) return null
+  return (
+    <div className="adm-ranking-col">
+      <h4>{titulo}</h4>
+      <ol>
+        {itens.map((t) => (
+          <li key={t.termo}>
+            <button className={`adm-termo${filtro === t.termo ? ' ativo' : ''}`} onClick={() => onFiltro(filtro === t.termo ? null : t)}>
+              <span className="adm-termo-nome">{t.termo}</span>
+              <Barra valor={t.qtd} max={total} cor="var(--accent-gold)" />
+              <b>{t.qtd}</b>
+            </button>
+          </li>
+        ))}
+      </ol>
+    </div>
+  )
+}
+
+function TextosPergunta({ p, onExcluir }) {
+  const [filtro, setFiltro] = useState(null)
+  const r = useMemo(() => ranking(p.itens), [p.itens])
+  const visiveis = filtro ? p.itens.filter((t) => filtro.ids.has(t.id)) : p.itens
+  const temRanking = r.palavras.length > 0 || r.expressoes.length > 0
+  return (
+    <div className="adm-textos">
+      <h3>{p.rotulo} <small>({p.itens.length})</small></h3>
+      {p.itens.length === 0 && <p className="form-desc">Sem respostas.</p>}
+      {temRanking && (
+        <div className="adm-ranking">
+          <p className="adm-ranking-nota">Termos mais citados · número de respostas que mencionam cada um · clique para filtrar</p>
+          <div className="adm-ranking-cols">
+            <ListaRanking titulo="Expressões" itens={r.expressoes} total={p.itens.length} filtro={filtro?.termo} onFiltro={setFiltro} />
+            <ListaRanking titulo="Palavras" itens={r.palavras} total={p.itens.length} filtro={filtro?.termo} onFiltro={setFiltro} />
+          </div>
+        </div>
+      )}
+      {filtro && (
+        <p className="adm-filtro">
+          Mostrando {visiveis.length} de {p.itens.length} respostas com “{filtro.termo}” ·{' '}
+          <button className="adm-link" onClick={() => setFiltro(null)}>mostrar todas</button>
+        </p>
+      )}
+      {visiveis.map((t) => (
+        <blockquote key={t.id}>
+          {t.texto}
+          <footer>
+            #{t.id} · {data(t.criado_em)}{' '}
+            <button className="adm-link" onClick={() => onExcluir(t.id)}>excluir resposta</button>
+          </footer>
+        </blockquote>
+      ))}
+    </div>
   )
 }
 
@@ -199,19 +257,7 @@ export default function Admin() {
           <div className="form-card">
             <h2>Respostas escritas</h2>
             {m.textos.map((p) => (
-              <div key={p.id} className="adm-textos">
-                <h3>{p.rotulo} <small>({p.itens.length})</small></h3>
-                {p.itens.length === 0 && <p className="form-desc">Sem respostas.</p>}
-                {p.itens.map((t) => (
-                  <blockquote key={t.id}>
-                    {t.texto}
-                    <footer>
-                      #{t.id} · {data(t.criado_em)}{' '}
-                      <button className="adm-link" onClick={() => mudar('excluir', t.id)}>excluir resposta</button>
-                    </footer>
-                  </blockquote>
-                ))}
-              </div>
+              <TextosPergunta key={p.id} p={p} onExcluir={(id) => mudar('excluir', id)} />
             ))}
           </div>
 
