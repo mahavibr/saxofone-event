@@ -1,0 +1,62 @@
+[
+  {
+    "autor": "Amarildo",
+    "itens": [
+      {
+        "titulo": "Respiração – Palestra",
+        "arquivos": [
+          {
+            "formato": "pdf",
+            "url": "/materiais/amarildo/respiracao-palestra-em-pp.pdf",
+            "nome": "Respiração – Palestra.pdf",
+            "bytes": 468716
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "autor": "José de Carvalho",
+    "itens": [
+      {
+        "titulo": "A Arte de Tocar em Conjunto — 10 anos do Grupo Sax Erudito - Sacro",
+        "arquivos": [
+          {
+            "formato": "pdf",
+            "url": "/materiais/jose-de-carvalho/a-arte-de-tocar-em-conjunto-10-anos-do-grupo-sax-erudito-sacro.pdf",
+            "nome": "A Arte de Tocar em Conjunto — 10 anos do Grupo Sax Erudito - Sacro.pdf",
+            "bytes": 2788365
+          },
+          {
+            "formato": "pptx",
+            "url": "/materiais/jose-de-carvalho/a-arte-de-tocar-em-conjunto-10-anos-do-grupo-sax-erudito-sacro.pptx",
+            "nome": "A Arte de Tocar em Conjunto — 10 anos do Grupo Sax Erudito - Sacro.pptx",
+            "bytes": 14715528
+          }
+        ]
+      },
+      {
+        "titulo": "Leitura, escuta e interpretação",
+        "arquivos": [
+          {
+            "formato": "pdf",
+            "url": "/materiais/jose-de-carvalho/leitura-escuta-e-interpretacao.pdf",
+            "nome": "Leitura, escuta e interpretação.pdf",
+            "bytes": 12245705
+          }
+        ]
+      },
+      {
+        "titulo": "Performance em Conjunto",
+        "arquivos": [
+          {
+            "formato": "pdf",
+            "url": "/materiais/jose-de-carvalho/performance-em-conjunto.pdf",
+            "nome": "Performance em Conjunto.pdf",
+            "bytes": 9315852
+          }
+        ]
+      }
+    ]
+  }
+]

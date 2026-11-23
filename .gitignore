@@ -36,3 +36,6 @@ src/assets/VideosRedes/
 
 # Originais das fotos (pesados) - só as versões otimizadas em public/fotos sobem
 src/assets/fotosevento/
+
+.DS_Store
+src/assets/materiais/

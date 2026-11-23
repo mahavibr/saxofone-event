@@ -3,6 +3,38 @@ import { useEffect, useState, useCallback } from 'react'
 import { zip } from 'fflate'
 import { Header } from './App.jsx'
 import FOTOS from './fotos-manifest.json'
+import MATERIAIS from './materiais-manifest.json'
+
+const tamanho = (b) => (b >= 1048576 ? `${(b / 1048576).toFixed(1).replace('.', ',')} MB` : `${Math.round(b / 1024)} KB`)
+
+function Materiais() {
+  return (
+    <div className="materiais">
+      <h2>Materiais do Encontro</h2>
+      <p className="materiais-sub">Apresentações dos palestrantes para baixar e estudar com calma.</p>
+      {MATERIAIS.map((g) => (
+        <div key={g.autor} className="materiais-grupo">
+          <h3>{g.autor}</h3>
+          <div className="materiais-lista">
+            {g.itens.map((it) => (
+              <div key={it.titulo} className="material-card">
+                <span className="material-icone" aria-hidden="true">📄</span>
+                <span className="material-titulo">{it.titulo}</span>
+                <div className="material-acoes">
+                  {it.arquivos.map((a) => (
+                    <a key={a.url} className={`gallery-btn${a.formato === 'pdf' ? ' gallery-btn-primary' : ''}`} href={a.url} download={a.nome}>
+                      Baixar {a.formato.toUpperCase()} <small>({tamanho(a.bytes)})</small>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 function Fotos() {
   const [current, setCurrent] = useState(null)
@@ -67,11 +99,14 @@ function Fotos() {
 
       <section className="photos-page">
         <div className="container">
-          <h1>Fotos do Evento</h1>
+          <h1>Fotos e Materiais</h1>
           <p className="photos-subtitle">
             Comemoração de 10 anos do Grupo Sax Erudito Sacro · 21 de novembro de 2026
           </p>
 
+          <Materiais />
+
+          <h2 className="fotos-titulo">Fotos do Evento</h2>
           <div className="gallery-toolbar">
             <span className="gallery-count">
               {selectMode && selected.size > 0

@@ -113,7 +113,11 @@ export default function Form() {
             <p className="partituras-subtitle">
               Sua resposta anônima foi registrada. Ela nos ajuda a fazer uma próxima edição ainda melhor. 🎷
             </p>
-            <a className="btn" href="/">Voltar ao início</a>
+            <p className="form-final-presente">
+              🎁 Como agradecimento, liberamos para você as <strong>fotos do encontro</strong> e as{' '}
+              <strong>apresentações dos palestrantes</strong>.
+            </p>
+            <a className="btn" href="/fotos">Acessar fotos e materiais</a>
           </div>
         </section>
       </>
