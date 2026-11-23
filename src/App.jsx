@@ -272,9 +272,6 @@ Cursou saxofone no Conservatório de Tatuí, e sua missão a cada saxofone é de
           <h1>Comemoração de 10 anos do Grupo: Sax Erudito Sacro</h1>
           <p className="hero-subtitle">Um dia inteiro celebrando a excelência do saxofone erudito</p>
           <p className="hero-date">Sábado, 21 de novembro de 2026</p>
-          <a className="btn hero-partituras" href="/partituras">
-            🎼 Revise as partituras e baixe de acordo com a voz do seu saxofone
-          </a>
         </div>
       </section>
 

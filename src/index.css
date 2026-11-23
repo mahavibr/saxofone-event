@@ -393,18 +393,6 @@ header {
   }
 }
 
-.hero-partituras {
-  display: inline-block;
-  margin-top: 1.5rem;
-  max-width: 540px;
-  text-align: center;
-  line-height: 1.35;
-
-  @media (max-width: 480px) {
-    font-size: 0.95rem;
-  }
-}
-
 .section-date {
   text-align: center;
   margin: -2.5rem 0 3rem;
